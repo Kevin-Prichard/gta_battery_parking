@@ -16,3 +16,6 @@ https://data.sfgov.org/Transportation/Map-of-Parking-Meters/fqfu-vcqd
 According to this, SF parking meter data is updated weekly-
 https://data.sfgov.org/Transportation/Parking-Meters/8vzz-qzz9
 
+
+### SF Streets polygons - last updated Dec 2014
+https://data.sfgov.org/City-Infrastructure/Right-of-Way-Polygons/a2mg-gwmg

@@ -1,9 +1,3 @@
 geopy
 shapely
-matplotlib
-# cartopy
-# pyshp
-# pkg-config
-lxml
-fastkml
 simplekml

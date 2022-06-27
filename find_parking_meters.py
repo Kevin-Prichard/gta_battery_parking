@@ -1,90 +1,19 @@
 #!/usr/bin/env python3.10
 
-import csv
-import typing
+import logging
+import re
 from collections import defaultdict
 from decimal import Decimal
-from functools import partial
-from geopy.distance import great_circle
-import json
-import logging
-from math import sin, cos, radians
+
 import matplotlib.pyplot as plt
-import pyproj
-from pyproj import CRS
-import random
-import re
-
-from shapely.geometry import Point, Polygon
-import shapely.ops as ops
 import simplekml
+from pyproj import CRS
+from shapely.geometry import Point, Polygon
 
+from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, random_color
 
 logger = logging.getLogger(__name__)
 earth = CRS("ESRI:54009")
-
-
-def conv_null(sqm):
-    return sqm
-
-
-def conv_sqmi(sqm):
-    return sqm / 2.59e+6
-
-
-def conv_sqkm(sqm):
-    return sqm / 1e+6
-
-
-def rotate2d(point, angle, center=(0, 0)):
-    # https://stackoverflow.com/questions/20023209/function-for-rotating-2d-objects
-    rads = radians(angle % 360)
-    new_pt = (point[0] - center[0], point[1] - center[1])
-    new_pt = (new_pt[0] * cos(rads) - new_pt[1] * sin(rads),
-                 new_pt[0] * sin(rads) + new_pt[1] * cos(rads))
-    new_pt = (new_pt[0] + center[0], new_pt[1] + center[1])
-    return new_pt
-
-
-class PointMiles(Point):
-    def distance_mi(self, other_point):
-        return great_circle(
-            (self.xy[0][0], self.xy[1][0]),
-            (other_point.xy[0][0], other_point.xy[1][0])
-        ).miles
-
-
-def polygon_area(poly, fn_conv: typing.Callable):
-    geom_area = ops.transform(
-        partial(
-            pyproj.transform,
-            pyproj.Proj(earth),
-            pyproj.Proj(
-                proj='aea',
-                lat_1=poly.bounds[1],
-                lat_2=poly.bounds[3]
-            )
-        ),
-        poly)
-    return fn_conv(geom_area.area)
-
-
-def load_tsv(fname):
-    with open(fname, "r") as f:
-        fields = f.readline()[1:]
-        fields = fields.split("\t")
-        reader = csv.DictReader(f, fields, delimiter="\t")
-        rows = []
-        for row in reader:
-            yield row
-
-
-def load_boundary_file(fname, pruncate=0):
-    with open(fname, "r") as f:
-        all = f.read()
-    obj = json.loads(all[all.find("{"):])
-    pol = Polygon([(p[0], p[1]) for p in obj["coordinates"][0][pruncate:]])
-    return pol
 
 
 # Based upon https://www.usna.edu/Users/oceano/pguth/md_help/html/approx_equivalents.htm
@@ -96,40 +25,7 @@ blue_zone_length = 0.00006
 dtsf_grid_rotation = 11.5  # 9.800
 
 
-# Turns the singular x, y point of a SF parking meter into a square
-def make_meter(x, y, width=meter_bb_size, length=meter_bb_size):
-    rot_cp = (x, y)
-    return [
-        rot_cp,
-        rotate2d((x - width, y), dtsf_grid_rotation, rot_cp),
-        rotate2d((x - width, y - length), dtsf_grid_rotation, rot_cp),
-        rotate2d((x, y - length), dtsf_grid_rotation, rot_cp),
-        rot_cp,
-    ]
-
-
-def make_stylemap(cols_widths: dict):  # norm_col, norm_width, hi_col, hi_width
-    k = simplekml
-    sm = k.StyleMap()
-    norm = k.Style()
-    norm.linestyle.color = cols_widths["ncol"]
-    norm.linestyle.width = cols_widths["nwidth"]
-    norm.polystyle.color = cols_widths["ncol"]
-    norm.polystyle.fill = 1
-    norm.polystyle.outline = 1
-    sm.normalstyle = norm
-    hilite = k.Style()
-    hilite.linestyle.color = cols_widths["hcol"]
-    hilite.linestyle.width = cols_widths["hwidth"]
-    hilite.polystyle.color = cols_widths["hcol"]
-    hilite.polystyle.fill = 1
-    hilite.polystyle.outline = 1
-    sm.highlightstyle = hilite
-    return sm
-
-
 blue_zone_color = make_stylemap({"ncol": "50FF7800", "nwidth": 4, "hcol": "50FF7800", "hwidth": 16})
-
 
 blue_zone_street_side = {
     "w": "west",
@@ -146,6 +42,72 @@ blue_zone_street_side = {
     "unknown": "<unknown>",
     "": "<unknown>",
 }
+
+
+meter_colors = {
+    "Yellow": make_stylemap({"ncol": "5013F0FF", "nwidth": 4, "hcol": "5000FFFF", "hwidth": 16}),
+    "Black": make_stylemap({"ncol": "50000000", "nwidth": 4, "hcol": "50585858", "hwidth": 16}),
+    "Grey": make_stylemap({"ncol": "508C8C8C", "nwidth": 4, "hcol": "50D0D0D0", "hwidth": 16}),
+    "-": make_stylemap({"ncol": "501478FF", "nwidth": 4, "hcol": "501478FF", "hwidth": 16}),
+    "Red": make_stylemap({"ncol": "501400F0", "nwidth": 4, "hcol": "501437FD", "hwidth": 16}),
+    "Green": make_stylemap({"ncol": "5014F028", "nwidth": 4, "hcol": "5014F0A9", "hwidth": 16}),
+    "Blue": make_stylemap({"ncol": "50F03714", "nwidth": 4, "hcol": "50F09A14", "hwidth": 16}),
+}
+meter_desc = {
+    "Yellow": "Commercial Only",
+    "Black": "Motorcycle",
+    "Grey": "Residential",
+    "-": "Eliminated",
+    "Red": "Commercial Trucks Only",
+    "Green": "15-30 Min Limit",
+    "Blue": "Accessible Parking",
+}
+meter_types = {
+    "-": "UNKNOWN",
+    "MS": "MOTORCYCLE",
+    "SS": "NORMAL"
+}
+
+
+boundaries = {
+    "cbd_fidi": {
+        "b": load_boundary_file("data/downtownsf_cbd_fidi_boundaries.json"),
+        "n": "Downtown SF CBD Financial District",
+        "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
+    },
+    "cbd_jackson": {
+        "b": load_boundary_file("data/downtownsf_cbd_jackson_sq_boundaries.json"),
+        "n": "Downtown SF CBD Jackson Square",
+        "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
+    },
+    "battery": {
+        "b": load_boundary_file("data/battery_qb_boundaries.json"),
+        "n": "Battery Street Quick Build Area",
+        "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
+    },
+    "battery_adjacent": {
+        "b": load_boundary_file("data/battery_adjacent_parking_boundaries.json"),
+        "n": "Battery Street Adjacent Parking Area",
+        "c": make_stylemap({"ncol": "5014F0F0", "nwidth": 4, "hcol": "5014F0F0", "hwidth": 16}),
+    },
+    "sansome": {
+        "b": load_boundary_file("data/sansome_qb_boundaries.json"),
+        "n": "Sansome Street Quick Build Area",
+        "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
+    },
+}
+
+
+# Turns the singular x, y point of a SF parking meter into a square
+def make_meter(x, y, width=meter_bb_size, length=meter_bb_size):
+    rot_cp = (x, y)
+    return [
+        rot_cp,
+        rotate2d((x - width, y), dtsf_grid_rotation, rot_cp),
+        rotate2d((x - width, y - length), dtsf_grid_rotation, rot_cp),
+        rotate2d((x, y - length), dtsf_grid_rotation, rot_cp),
+        rot_cp,
+    ]
 
 
 def add_blue_zones(doc, battery_bounds):
@@ -169,79 +131,80 @@ def add_blue_zones(doc, battery_bounds):
         zone_count += 1
 
 
-meter_colors = {
-    "Yellow": make_stylemap({"ncol": "5013F0FF", "nwidth": 4, "hcol": "5000FFFF", "hwidth": 16}),
-    "Black": make_stylemap({"ncol": "50000000", "nwidth": 4, "hcol": "50585858", "hwidth": 16}),
-    "Grey": make_stylemap({"ncol": "508C8C8C", "nwidth": 4, "hcol": "50D0D0D0", "hwidth": 16}),
-    "-": make_stylemap({"ncol": "501478FF", "nwidth": 4, "hcol": "501478FF", "hwidth": 16}),
-    "Red": make_stylemap({"ncol": "501400F0", "nwidth": 4, "hcol": "501437FD", "hwidth": 16}),
-    "Green": make_stylemap({"ncol": "5014F028", "nwidth": 4, "hcol": "5014F0A9", "hwidth": 16}),
-}
-meter_desc = {
-    "Yellow": "Commercial Only",
-    "Black": "Motorcycle",
-    "Grey": "Residential",
-    "-": "Eliminated",
-    "Red": "Commercial Trucks Only",
-    "Green": "15-30 Min Limit",
-}
-meter_types = {
-    "-": "UNKNOWN",
-    "MS": "MOTORCYCLE",
-    "SS": "NORMAL"
-}
-
-
 def add_meters(doc):
     battery = boundaries["battery"]["b"]
+    battery_adj = boundaries["battery_adjacent"]["b"]
+    # sansome = boundaries["sansome"]["b"]
     cbd_fidi = boundaries["cbd_fidi"]["b"]
     cbd_jackson = boundaries["cbd_jackson"]["b"]
     inside_battery_count = 0
-    inside_fidi_cbd_count = 0
-    outside_battery_count = 0
-    mtype_cbd_fidi = defaultdict(int)
+    inside_dtsf_cbd_count = 0
+    inside_battery_adj_count = 0
+    mtype_batadj = defaultdict(int)
+    mtype_cbd = defaultdict(int)
     mtypes_battery_east = defaultdict(int)
     mtypes_battery_west = defaultdict(int)
-    for m in load_tsv("data/Parking_Meters.tsv"):
-        p = Point(Decimal(m["LONGITUDE"]), Decimal(m["LATITUDE"]))
-        if battery.contains(p) and m["STREET_NAME"] == "BATTERY ST":
-            street_num = int(m['STREET_NUM'])
-            if street_num / 2 == int(street_num / 2):
-                mtypes_battery_east[f'{m["CAP_COLOR"]}'] += 1
-            else:
-                mtypes_battery_west[f'{m["CAP_COLOR"]}'] += 1
-            inside_battery_count += 1
-            pm = doc.newpolygon(name=f"{m['STREET_NUM']} {m['STREET_NAME']}\n" +
-                                     f"Post ID: {m['POST_ID']}, Space ID: {m['PARKING_SPACE_ID']}\n" +
-                                     f"[Type: {meter_desc[m['CAP_COLOR']]}]\n" +
-                                     f"(District {m['Current Supervisor Districts']}, SFPD Central)"
-                                )
-            pm.outerboundaryis = make_meter(p.x, p.y)
-            pm.placemark.geometry.outerboundaryis.gxaltitudeoffset = 10
-            pm.stylemap = meter_colors[m["CAP_COLOR"]]
-        elif cbd_fidi.contains(p):
-            inside_fidi_cbd_count += 1
-            mtype_cbd_fidi[m["CAP_COLOR"]] += 1
-        else:
-            outside_battery_count += 1
-    for k, v in mtypes_battery_east.items():
-        print(f"{k}\t{v}")
-    print(f"Inside Battery: {inside_battery_count}")
-    print(f"Outside Battery: {outside_battery_count}")
-    print(f"Inside DTSF CBD: {inside_fidi_cbd_count}")
-    print("DTSF CBD Parking Spaces ALL")
-    for k, v in mtype_cbd_fidi.items():
+    for pm in load_tsv("data/Parking_Meters.tsv"):
+        p = Point(Decimal(pm["LONGITUDE"]), Decimal(pm["LATITUDE"]))
+        pm_battery = battery.contains(p) and pm["STREET_NAME"] == "BATTERY ST"
+        # pm_sansome = sansome.contains(p) and pm["STREET_NAME"] == "SANSOME ST"
+        pm_dtsf_cbd = cbd_fidi.contains(p) or cbd_jackson.contains(p)
+        pm_battery_adj = battery_adj.contains(p)
+        if pm_battery:  # or pm_sansome:
+            street_num = int(pm['STREET_NUM'])
+            if pm_battery:
+                if street_num / 2 == int(street_num / 2):
+                    mtypes_battery_east[f'{pm["CAP_COLOR"]}'] += 1
+                else:
+                    mtypes_battery_west[f'{pm["CAP_COLOR"]}'] += 1
+                inside_battery_count += 1
+            pmp = doc.newpolygon(name=f"{pm['STREET_NUM']} {pm['STREET_NAME']}\n" +
+                                      f"Post ID: {pm['POST_ID']}, Space ID: {pm['PARKING_SPACE_ID']}\n" +
+                                      f"[Type: {meter_desc[pm['CAP_COLOR']]}]\n" +
+                                      f"(District {pm['Current Supervisor Districts']}, SFPD Central)")
+            pmp.outerboundaryis = make_meter(p.x, p.y)
+            pmp.placemark.geometry.outerboundaryis.gxaltitudeoffset = 10
+            pmp.stylemap = meter_colors[pm["CAP_COLOR"]]
+        if pm_dtsf_cbd:
+            inside_dtsf_cbd_count += 1
+            mtype_cbd[pm["CAP_COLOR"]] += 1
+        if pm_battery_adj:
+            inside_battery_adj_count += 1
+            mtype_batadj[pm["CAP_COLOR"]] += 1
+
+    print("\nBattery East Side Meters")
+    for k in sorted(mtypes_battery_east.keys()):
+        v = mtypes_battery_east[k]
+        print(f"{meter_desc[k]}\t{v}")
+    print("\nBattery West Side Meters")
+    for k in sorted(mtypes_battery_west.keys()):
+        v = mtypes_battery_west[k]
+        print(f"{meter_desc[k]}\t{v}")
+
+    print(f"\nInside Battery: {inside_battery_count}")
+    print(f"Inside DTSF CBD: {inside_dtsf_cbd_count}")
+    print(f"Inside Battery Adjacent: {inside_battery_adj_count}")
+
+    print("\nDTSF CBD Parking Spaces ALL AFFECTED")
+    for k in sorted(mtype_cbd.keys()):
+        v = mtype_cbd[k]
         both = mtypes_battery_west[k] + mtypes_battery_east[k]
-        print(f"{k}\t{v}\t{both}\t{round(both / mtype_cbd_fidi[k] * 100, 2)}%")
-    print("DTSF CBD Parking Spaces REMOVED")
-    for k, v in mtype_cbd_fidi.items():
-        print(f"{k}\t{v}\t{mtypes_battery_east[k]}\t" +
-              f"{round(mtypes_battery_east[k] / mtype_cbd_fidi[k] * 100, 2)}%")
+        print(f"{meter_desc[k]}\t{v}\t{both}\t{round(both / mtype_cbd[k] * 100, 2)}%")
 
+    print("\nDTSF CBD Parking Spaces REMOVED")
+    for k in sorted(mtype_cbd.keys()):
+        v = mtype_cbd[k]
+        print(f"{meter_desc[k]}\t{v}\t{mtypes_battery_east[k]}\t" +
+              f"{round(mtypes_battery_east[k] / mtype_cbd[k] * 100, 2)}%")
 
-def random_color():
-    r = lambda: random.randint(0, 255)
-    return '#FF{:02X}{:02X}{:02X}'.format(r(), r(), r())
+    print("\nBattery Adjacent Spaces\tBattery E+W\tBattery E\tPct E+W\tPct E")
+    for k in sorted(mtype_batadj.keys()):
+        v = mtype_batadj[k]
+        bat_east = mtypes_battery_east[k]
+        both = max(1, mtypes_battery_west[k] + bat_east)
+        print(f"{meter_desc[k]}\t{v}\t{both}\t{bat_east}\t" +
+              f"{round(both / mtype_batadj[k] * 100, 2)}%\t"
+              f"{round(bat_east / mtype_batadj[k] * 100, 2)}%")
 
 
 def wkt_to_kml(wkt, doc, dry=False):
@@ -261,36 +224,14 @@ def wkt_to_kml(wkt, doc, dry=False):
     return {"type": parts.group(1), "coords": coords}
 
 
-boundaries = {
-    "cbd_fidi": {
-        "b": load_boundary_file("data/downtownsf_cbd_fidi_boundaries.json"),
-        "n": "Downtown SF CBD Financial District",
-        "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
-
-    },
-    "cbd_jackson": {
-        "b": load_boundary_file("data/downtownsf_cbd_jackson_sq_boundaries.json"),
-        "n": "Downtown SF CBD Jackson Square",
-        "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
-    },
-    "battery": {
-        "b": load_boundary_file("data/battery_boundaries.json"),
-        "n": "Battery Street",
-        "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
-    },
-    # the areas around battery south of Embarcadero Center
-    # return MultiPolygon(boundaries), boundaries
-}
-
-
-def make_battery_street(name):
+def make_battery_sansome_qb_map(name):
     k = simplekml
     doc = k.Kml(name=name)
-    # doc.stylemaps.append(sm)
 
     for k, b in boundaries.items():
         poly = doc.newpolygon(name=b["n"], description=b["n"])
         poly.outerboundaryis = list(b["b"].exterior.coords)
+        poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = 0
         poly.stylemap = b["c"]
 
     add_meters(doc)
@@ -309,5 +250,13 @@ def main_sanity_check():
 
 
 if __name__ == "__main__":
-    d = make_battery_street("Battery Street Features")
+    d = make_battery_sansome_qb_map("Battery Street Parking Spaces")
     d.save("better.kml")
+
+"""
+Next up-
+Check that CBD boundaries really match the map, and cover the other side of the street
+Add Sansome like Battery
+Perform neighboring street-block analysis, 1-block, 2-block, for space loss impact
+Bonus points: removing 2-3 spaces per intersection for loading zones
+"""

@@ -1,0 +1,3362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="92">
+        <Style id="57">
+            <LineStyle id="58">
+                <color>448F9185</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="59">
+                <color>448F9185</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="60">
+            <LineStyle id="61">
+                <color>44999B8F</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="62">
+                <color>44999B8F</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="64">
+            <LineStyle id="65">
+                <color>448F9185</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="66">
+                <color>448F9185</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="67">
+            <LineStyle id="68">
+                <color>44999B8F</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="69">
+                <color>44999B8F</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="71">
+            <LineStyle id="72">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="73">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="74">
+            <LineStyle id="75">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="76">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="78">
+            <LineStyle id="79">
+                <color>5014F0F0</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="80">
+                <color>5014F0F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="81">
+            <LineStyle id="82">
+                <color>5014F0F0</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="83">
+                <color>5014F0F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="85">
+            <LineStyle id="86">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="87">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="88">
+            <LineStyle id="89">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="90">
+                <color>305078F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="8">
+            <LineStyle id="9">
+                <color>5013F0FF</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="10">
+                <color>5013F0FF</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="11">
+            <LineStyle id="12">
+                <color>5000FFFF</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="13">
+                <color>5000FFFF</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="15">
+            <LineStyle id="16">
+                <color>50000000</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="17">
+                <color>50000000</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="18">
+            <LineStyle id="19">
+                <color>50585858</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="20">
+                <color>50585858</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="22">
+            <LineStyle id="23">
+                <color>508C8C8C</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="24">
+                <color>508C8C8C</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="25">
+            <LineStyle id="26">
+                <color>50D0D0D0</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="27">
+                <color>50D0D0D0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="29">
+            <LineStyle id="30">
+                <color>501478FF</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="31">
+                <color>501478FF</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="32">
+            <LineStyle id="33">
+                <color>501478FF</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="34">
+                <color>501478FF</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="36">
+            <LineStyle id="37">
+                <color>501400F0</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="38">
+                <color>501400F0</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="39">
+            <LineStyle id="40">
+                <color>501437FD</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="41">
+                <color>501437FD</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="43">
+            <LineStyle id="44">
+                <color>5014F028</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="45">
+                <color>5014F028</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="46">
+            <LineStyle id="47">
+                <color>5014F0A9</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="48">
+                <color>5014F0A9</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="1">
+            <LineStyle id="2">
+                <color>50FF7800</color>
+                <colorMode>normal</colorMode>
+                <width>4</width>
+            </LineStyle>
+            <PolyStyle id="3">
+                <color>50FF7800</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Style id="4">
+            <LineStyle id="5">
+                <color>50FF7800</color>
+                <colorMode>normal</colorMode>
+                <width>16</width>
+            </LineStyle>
+            <PolyStyle id="6">
+                <color>50FF7800</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <StyleMap id="56">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#57</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#60</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="63">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#64</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#67</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="70">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#71</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#74</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="77">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#78</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#81</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="84">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#85</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#88</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="7">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#8</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#11</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="14">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#15</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#18</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="21">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#22</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#25</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="28">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#29</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#32</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="35">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#36</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#39</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="42">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#43</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#46</styleUrl>
+            </Pair>
+        </StyleMap>
+        <StyleMap id="0">
+            <Pair>
+                <key>normal</key>
+                <styleUrl>#1</styleUrl>
+            </Pair>
+            <Pair>
+                <key>highlight</key>
+                <styleUrl>#4</styleUrl>
+            </Pair>
+        </StyleMap>
+        <name>Battery Street Parking Spaces</name>
+        <Placemark id="94">
+            <name>Downtown SF CBD Financial District</name>
+            <description>Downtown SF CBD Financial District</description>
+            <styleUrl>#56</styleUrl>
+            <Polygon id="93">
+                <outerBoundaryIs>
+                    <LinearRing id="97">
+                        <gx:altitudeOffset>0</gx:altitudeOffset>
+                        <coordinates>-122.4045476,37.7935839,0.0 -122.4046093,37.7935776,0.0 -122.404038,37.7906653,0.0 -122.403751,37.7892133,0.0 -122.4036089,37.7884799,0.0 -122.4034238,37.7876914,0.0 -122.4024019,37.7884841,0.0 -122.4018842,37.7889081,0.0 -122.4013934,37.7892832,0.0 -122.400358,37.7884523,0.0 -122.3989284,37.7896415,0.0 -122.3993576,37.7899891,0.0 -122.3986012,37.7905995,0.0 -122.3984054,37.7904639,0.0 -122.3975256,37.7911295,0.0 -122.3971662,37.7908539,0.0 -122.3967344,37.791174,0.0 -122.396898,37.7913351,0.0 -122.3964876,37.7916848,0.0 -122.3964179,37.7916488,0.0 -122.3955381,37.7922995,0.0 -122.396493,37.7930668,0.0 -122.3956668,37.7937026,0.0 -122.3925045,37.7912948,0.0 -122.3916516,37.7920048,0.0 -122.3912144,37.7923673,0.0 -122.3933011,37.7941838,0.0 -122.3938832,37.7937959,0.0 -122.3951304,37.7947709,0.0 -122.4044645,37.7936051,0.0 -122.4045476,37.7935839,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="100">
+            <name>Downtown SF CBD Jackson Square</name>
+            <description>Downtown SF CBD Jackson Square</description>
+            <styleUrl>#63</styleUrl>
+            <Polygon id="99">
+                <outerBoundaryIs>
+                    <LinearRing id="103">
+                        <gx:altitudeOffset>0</gx:altitudeOffset>
+                        <coordinates>-122.405296,37.7975776,0.0 -122.4054019,37.797568,0.0 -122.4052852,37.7969709,0.0 -122.4047703,37.7966297,0.0 -122.4041936,37.7967038,0.0 -122.4041158,37.7963499,0.0 -122.403515,37.7964241,0.0 -122.4033326,37.7955381,0.0 -122.4038905,37.7954533,0.0 -122.4037161,37.7945865,0.0 -122.4039817,37.7945674,0.0 -122.4037832,37.7936687,0.0 -122.4000308,37.7941604,0.0 -122.4003285,37.7958942,0.0 -122.4015597,37.7957416,0.0 -122.4017259,37.7966572,0.0 -122.4019271,37.7975241,0.0 -122.403692,37.7973121,0.0 -122.4037886,37.7977424,0.0 -122.405296,37.7975776,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="106">
+            <name>Battery Street Quick Build Area</name>
+            <description>Battery Street Quick Build Area</description>
+            <styleUrl>#70</styleUrl>
+            <Polygon id="105">
+                <outerBoundaryIs>
+                    <LinearRing id="109">
+                        <gx:altitudeOffset>0</gx:altitudeOffset>
+                        <coordinates>-122.4013129,37.799529,0.0 -122.4013612,37.7995205,0.0 -122.4009964,37.7976449,0.0 -122.4006397,37.795856,0.0 -122.4002856,37.7941329,0.0 -122.3999959,37.7927191,0.0 -122.3997277,37.7913096,0.0 -122.3994729,37.7913372,0.0 -122.4000308,37.7941583,0.0 -122.4001837,37.7950252,0.0 -122.4003795,37.7958963,0.0 -122.4005646,37.7968056,0.0 -122.4007523,37.7976767,0.0 -122.4011359,37.7995481,0.0 -122.4013129,37.799529,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="112">
+            <name>Battery Street Adjacent Parking Area</name>
+            <description>Battery Street Adjacent Parking Area</description>
+            <styleUrl>#77</styleUrl>
+            <Polygon id="111">
+                <outerBoundaryIs>
+                    <LinearRing id="115">
+                        <gx:altitudeOffset>0</gx:altitudeOffset>
+                        <coordinates>-122.401498,37.8005357,0.0 -122.4027693,37.8003958,0.0 -122.4021846,37.7975219,0.0 -122.4020076,37.7966191,0.0 -122.4018198,37.7957162,0.0 -122.4016482,37.7948556,0.0 -122.4015677,37.794419,0.0 -122.4014711,37.7939866,0.0 -122.4011707,37.7925284,0.0 -122.4006933,37.7900866,0.0 -122.398333,37.7919095,0.0 -122.3988479,37.794313,0.0 -122.3990679,37.7952753,0.0 -122.4001676,37.7951269,0.0 -122.4003232,37.7957925,0.0 -122.3980165,37.7960977,0.0 -122.398231,37.7972083,0.0 -122.3994166,37.7970641,0.0 -122.4001354,37.8006968,0.0 -122.401498,37.8005357,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="118">
+            <name>Sansome Street Quick Build Area</name>
+            <description>Sansome Street Quick Build Area</description>
+            <styleUrl>#84</styleUrl>
+            <Polygon id="117">
+                <outerBoundaryIs>
+                    <LinearRing id="121">
+                        <gx:altitudeOffset>0</gx:altitudeOffset>
+                        <coordinates>-122.402131,37.7984502,0.0 -122.4023589,37.7984206,0.0 -122.4019888,37.7966169,0.0 -122.4018091,37.7957162,0.0 -122.4016213,37.7948535,0.0 -122.4014443,37.7939888,0.0 -122.4012592,37.793054,0.0 -122.4010742,37.7921045,0.0 -122.4007094,37.790235,0.0 -122.400694,37.7902382,0.0 -122.4006745,37.7902397,0.0 -122.400645,37.7902413,0.0 -122.4006148,37.790244,0.0 -122.4005853,37.7902487,0.0 -122.4005625,37.7902525,0.0 -122.4005357,37.7902562,0.0 -122.4004955,37.7902631,0.0 -122.4004633,37.7902662,0.0 -122.4006638,37.7911952,0.0 -122.4008462,37.7921299,0.0 -122.401042,37.7930922,0.0 -122.4012002,37.7939231,0.0 -122.4012217,37.7940163,0.0 -122.4013773,37.7947581,0.0 -122.401396,37.7948684,0.0 -122.4015704,37.7957352,0.0 -122.4017581,37.7966678,0.0 -122.402131,37.7984502,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="124">
+            <name>202 BATTERY ST
+Post ID: 324-02020, Space ID: 124265
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="123">
+                <outerBoundaryIs>
+                    <LinearRing id="127">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999060017,37.7933429022,0.0 -122.39993049981761,37.79333791800164,0.0 -122.39992551561926,37.79331341988403,0.0 -122.39990101750165,37.793318404082385,0.0 -122.3999060017,37.7933429022,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="130">
+            <name>623 BATTERY ST
+Post ID: 324-06450, Space ID: 129937
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="129">
+                <outerBoundaryIs>
+                    <LinearRing id="133">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009188988,37.7975413975,0.0 -122.40094339691761,37.797536413301636,0.0 -122.40093841271926,37.797511915184025,0.0 -122.40091391460165,37.79751689938238,0.0 -122.4009188988,37.7975413975,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="136">
+            <name>714 BATTERY ST
+Post ID: 324-07140, Space ID: 121609
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="135">
+                <outerBoundaryIs>
+                    <LinearRing id="139">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008603987,37.7980352984,0.0 -122.40088489681762,37.79803031420164,0.0 -122.40087991261926,37.79800581608403,0.0 -122.40085541450165,37.798010800282384,0.0 -122.4008603987,37.7980352984,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="142">
+            <name>717 BATTERY ST
+Post ID: 324-07170, Space ID: 100701
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="141">
+                <outerBoundaryIs>
+                    <LinearRing id="145">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010453985,37.7981509016,0.0 -122.40106989661761,37.79814591740164,0.0 -122.40106491241926,37.79812141928403,0.0 -122.40104041430165,37.798126403482385,0.0 -122.4010453985,37.7981509016,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="148">
+            <name>826 BATTERY ST
+Post ID: 324-08260, Space ID: 100958
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="147">
+                <outerBoundaryIs>
+                    <LinearRing id="151">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010866706,37.7991725466,0.0 -122.4011111687176,37.799167562401635,0.0 -122.40110618451925,37.799143064284024,0.0 -122.40108168640164,37.79914804848238,0.0 -122.4010866706,37.7991725466,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="154">
+            <name>707 BATTERY ST
+Post ID: 324-07070, Space ID: 125025
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="153">
+                <outerBoundaryIs>
+                    <LinearRing id="157">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009907988,37.7978832004,0.0 -122.4010152969176,37.79787821620164,0.0 -122.40101031271925,37.79785371808403,0.0 -122.40098581460164,37.79785870228238,0.0 -122.4009907988,37.7978832004,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="160">
+            <name>29 BATTERY ST
+Post ID: 324-00290, Space ID: 119503
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="159">
+                <outerBoundaryIs>
+                    <LinearRing id="163">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998076987,37.7920841024,0.0 -122.39983219681761,37.792079118201634,0.0 -122.39982721261926,37.79205462008402,0.0 -122.39980271450165,37.79205960428238,0.0 -122.3998076987,37.7920841024,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="166">
+            <name>526 BATTERY ST
+Post ID: 324-05260, Space ID: 108871
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="165">
+                <outerBoundaryIs>
+                    <LinearRing id="169">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005544984,37.796572701,0.0 -122.40057899651761,37.79656771680164,0.0 -122.40057401231925,37.79654321868403,0.0 -122.40054951420164,37.796548202882384,0.0 -122.4005544984,37.796572701,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="172">
+            <name>632 BATTERY ST
+Post ID: 324-06320, Space ID: 122873
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="171">
+                <outerBoundaryIs>
+                    <LinearRing id="175">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4007124973,37.7973074977,0.0 -122.40073699541762,37.797302513501634,0.0 -122.40073201121926,37.79727801538402,0.0 -122.40070751310165,37.79728299958238,0.0 -122.4007124973,37.7973074977,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="178">
+            <name>103 BATTERY ST
+Post ID: 324-01030, Space ID: 103461
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="177">
+                <outerBoundaryIs>
+                    <LinearRing id="181">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998772015,37.7924167019,0.0 -122.39990169961762,37.79241171770164,0.0 -122.39989671541926,37.79238721958403,0.0 -122.39987221730165,37.792392203782384,0.0 -122.3998772015,37.7924167019,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="184">
+            <name>122 BATTERY ST
+Post ID: 324-01220, Space ID: 113155
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="183">
+                <outerBoundaryIs>
+                    <LinearRing id="187">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998149016,37.7928987005,0.0 -122.3998393997176,37.792893716301634,0.0 -122.39983441551925,37.79286921818402,0.0 -122.39980991740164,37.79287420238238,0.0 -122.3998149016,37.7928987005,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="190">
+            <name>528 BATTERY ST
+Post ID: 324-05280, Space ID: 114827
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="189">
+                <outerBoundaryIs>
+                    <LinearRing id="193">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005660989,37.7966294018,0.0 -122.40059059701761,37.796624417601635,0.0 -122.40058561281926,37.796599919484024,0.0 -122.40056111470165,37.79660490368238,0.0 -122.4005660989,37.7966294018,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="196">
+            <name>623 BATTERY ST
+Post ID: 324-06390, Space ID: 128587
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="195">
+                <outerBoundaryIs>
+                    <LinearRing id="199">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009131991,37.7975127985,0.0 -122.40093769721761,37.79750781430164,0.0 -122.40093271301926,37.79748331618403,0.0 -122.40090821490165,37.79748830038238,0.0 -122.4009131991,37.7975127985,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="202">
+            <name>510 BATTERY ST
+Post ID: 324-05100, Space ID: 128948
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="201">
+                <outerBoundaryIs>
+                    <LinearRing id="205">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004867,37.7962400009,0.0 -122.40051119811761,37.79623501670164,0.0 -122.40050621391926,37.796210518584026,0.0 -122.40048171580165,37.79621550278238,0.0 -122.4004867,37.7962400009,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="208">
+            <name>104 BATTERY ST
+Post ID: 324-01040, Space ID: 128929
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="207">
+                <outerBoundaryIs>
+                    <LinearRing id="211">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997188003,37.7924321023,0.0 -122.3997432984176,37.792427118101635,0.0 -122.39973831421925,37.792402619984024,0.0 -122.39971381610164,37.79240760418238,0.0 -122.3997188003,37.7924321023,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="214">
+            <name>701 BATTERY ST
+Post ID: 324-07010, Space ID: 124192
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="213">
+                <outerBoundaryIs>
+                    <LinearRing id="217">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009613001,37.7977382996,0.0 -122.4009857982176,37.797733315401636,0.0 -122.40098081401925,37.797708817284025,0.0 -122.40095631590164,37.79771380148238,0.0 -122.4009613001,37.7977382996,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="220">
+            <name>21 BATTERY ST
+Post ID: 324-00210, Space ID: 108847
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="219">
+                <outerBoundaryIs>
+                    <LinearRing id="223">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997563009,37.7918342994,0.0 -122.3997807990176,37.79182931520164,0.0 -122.39977581481925,37.79180481708403,0.0 -122.39975131670164,37.79180980128238,0.0 -122.3997563009,37.7918342994,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="226">
+            <name>121 BATTERY ST
+Post ID: 324-01210, Space ID: 111318
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="225">
+                <outerBoundaryIs>
+                    <LinearRing id="229">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999592994,37.7928154011,0.0 -122.3999837975176,37.79281041690164,0.0 -122.39997881331925,37.79278591878403,0.0 -122.39995431520164,37.79279090298238,0.0 -122.3999592994,37.7928154011,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="232">
+            <name>226 BATTERY ST
+Post ID: 324-02260, Space ID: 110421
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="231">
+                <outerBoundaryIs>
+                    <LinearRing id="235">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000202973,37.7938977004,0.0 -122.40004479541761,37.79389271620164,0.0 -122.40003981121926,37.79386821808403,0.0 -122.40001531310165,37.793873202282384,0.0 -122.4000202973,37.7938977004,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="238">
+            <name>503 BATTERY ST
+Post ID: 324-05130, Space ID: 130027
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="237">
+                <outerBoundaryIs>
+                    <LinearRing id="241">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006077011,37.7960378014,0.0 -122.40063219921761,37.796032817201635,0.0 -122.40062721501926,37.796008319084024,0.0 -122.40060271690164,37.79601330328238,0.0 -122.4006077011,37.7960378014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="244">
+            <name>3 BATTERY ST
+Post ID: 324-00030, Space ID: 100736
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="243">
+                <outerBoundaryIs>
+                    <LinearRing id="247">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3996809979,37.7914689993,0.0 -122.39970549601762,37.79146401510164,0.0 -122.39970051181926,37.79143951698403,0.0 -122.39967601370165,37.79144450118238,0.0 -122.3996809979,37.7914689993,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="250">
+            <name>728 BATTERY ST
+Post ID: 324-07280, Space ID: 100702
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="249">
+                <outerBoundaryIs>
+                    <LinearRing id="253">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009374005,37.7984128025,0.0 -122.40096189861761,37.79840781830164,0.0 -122.40095691441925,37.79838332018403,0.0 -122.40093241630164,37.798388304382385,0.0 -122.4009374005,37.7984128025,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="256">
+            <name>418 BATTERY ST
+Post ID: 324-04180, Space ID: 103476
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="255">
+                <outerBoundaryIs>
+                    <LinearRing id="259">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003473983,37.7955759027,0.0 -122.40037189641761,37.79557091850164,0.0 -122.40036691221925,37.79554642038403,0.0 -122.40034241410164,37.79555140458238,0.0 -122.4003473983,37.7955759027,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="262">
+            <name>818 BATTERY ST
+Post ID: 324-08180, Space ID: 126471
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="261">
+                <outerBoundaryIs>
+                    <LinearRing id="265">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010529146,37.7989994061,0.0 -122.40107741271761,37.79899442190164,0.0 -122.40107242851926,37.79896992378403,0.0 -122.40104793040165,37.798974907982384,0.0 -122.4010529146,37.7989994061,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="268">
+            <name>411 BATTERY ST
+Post ID: 324-04110, Space ID: 108869
+[Type: 15-30 Min Limit]
+(District 3, SFPD Central)</name>
+            <styleUrl>#42</styleUrl>
+            <Polygon id="267">
+                <outerBoundaryIs>
+                    <LinearRing id="271">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004863982,37.7953440984,0.0 -122.40051089631761,37.79533911420164,0.0 -122.40050591211926,37.79531461608403,0.0 -122.40048141400165,37.79531960028238,0.0 -122.4004863982,37.7953440984,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="274">
+            <name>616 BATTERY ST
+Post ID: 324-06160, Space ID: 103034
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="273">
+                <outerBoundaryIs>
+                    <LinearRing id="277">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006442015,37.7969654993,0.0 -122.40066869961761,37.79696051510164,0.0 -122.40066371541926,37.79693601698403,0.0 -122.40063921730165,37.79694100118238,0.0 -122.4006442015,37.7969654993,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="280">
+            <name>509 BATTERY ST
+Post ID: 324-05410, Space ID: 124417
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="279">
+                <outerBoundaryIs>
+                    <LinearRing id="283">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006361996,37.796177701,0.0 -122.40066069771761,37.796172716801635,0.0 -122.40065571351926,37.796148218684024,0.0 -122.40063121540165,37.79615320288238,0.0 -122.4006361996,37.796177701,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="286">
+            <name>414 BATTERY ST
+Post ID: 324-04140, Space ID: 126300
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="285">
+                <outerBoundaryIs>
+                    <LinearRing id="289">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003263989,37.7954627973,0.0 -122.40035089701762,37.795457813101635,0.0 -122.40034591281926,37.795433314984024,0.0 -122.40032141470165,37.79543829918238,0.0 -122.4003263989,37.7954627973,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="292">
+            <name>804 BATTERY ST
+Post ID: 324-08040, Space ID: 111072
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="291">
+                <outerBoundaryIs>
+                    <LinearRing id="295">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010044169,37.7987507039,0.0 -122.4010289150176,37.798745719701635,0.0 -122.40102393081925,37.798721221584024,0.0 -122.40099943270164,37.79872620578238,0.0 -122.4010044169,37.7987507039,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="298">
+            <name>524 BATTERY ST
+Post ID: 324-05240, Space ID: 110400
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="297">
+                <outerBoundaryIs>
+                    <LinearRing id="301">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005426017,37.7965145026,0.0 -122.40056709981761,37.796509518401635,0.0 -122.40056211561925,37.796485020284024,0.0 -122.40053761750164,37.79649000448238,0.0 -122.4005426017,37.7965145026,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="304">
+            <name>115 BATTERY ST
+Post ID: 324-01150, Space ID: 104100
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="303">
+                <outerBoundaryIs>
+                    <LinearRing id="307">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999257998,37.792652401,0.0 -122.39995029791761,37.792647416801636,0.0 -122.39994531371926,37.792622918684025,0.0 -122.39992081560165,37.79262790288238,0.0 -122.3999257998,37.792652401,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="310">
+            <name>304 BATTERY ST
+Post ID: 324-03040, Space ID: 121973
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="309">
+                <outerBoundaryIs>
+                    <LinearRing id="313">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001042002,37.7943053012,0.0 -122.40012869831762,37.794300317001635,0.0 -122.40012371411926,37.794275818884024,0.0 -122.40009921600165,37.79428080308238,0.0 -122.4001042002,37.7943053012,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="316">
+            <name>204 BATTERY ST
+Post ID: 324-02040, Space ID: 111403
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="315">
+                <outerBoundaryIs>
+                    <LinearRing id="319">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.399920698,37.7934141987,0.0 -122.39994519611761,37.79340921450164,0.0 -122.39994021191926,37.793384716384026,0.0 -122.39991571380165,37.79338970058238,0.0 -122.399920698,37.7934141987,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="322">
+            <name>126 BATTERY ST
+Post ID: 324-01260, Space ID: 103462
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="321">
+                <outerBoundaryIs>
+                    <LinearRing id="325">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998383989,37.7930130017,0.0 -122.39986289701761,37.793008017501634,0.0 -122.39985791281926,37.79298351938402,0.0 -122.39983341470165,37.79298850358238,0.0 -122.3998383989,37.7930130017,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="328">
+            <name>125 BATTERY ST
+Post ID: 324-01250, Space ID: 111931
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="327">
+                <outerBoundaryIs>
+                    <LinearRing id="331">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999824,37.7929274001,0.0 -122.40000689811761,37.792922415901636,0.0 -122.40000191391925,37.792897917784025,0.0 -122.39997741580164,37.79290290198238,0.0 -122.3999824,37.7929274001,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="334">
+            <name>316 BATTERY ST
+Post ID: 324-03160, Space ID: 107574
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="333">
+                <outerBoundaryIs>
+                    <LinearRing id="337">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001732,37.7946401973,0.0 -122.40019769811761,37.794635213101635,0.0 -122.40019271391925,37.794610714984024,0.0 -122.40016821580164,37.79461569918238,0.0 -122.4001732,37.7946401973,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="340">
+            <name>201 BATTERY ST
+Post ID: 324-02010, Space ID: 105445
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="339">
+                <outerBoundaryIs>
+                    <LinearRing id="343">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000675992,37.7933393986,0.0 -122.40009209731761,37.793334414401635,0.0 -122.40008711311926,37.793309916284024,0.0 -122.40006261500164,37.79331490048238,0.0 -122.4000675992,37.7933393986,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="346">
+            <name>307 BATTERY ST
+Post ID: 324-03070, Space ID: 119888
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="345">
+                <outerBoundaryIs>
+                    <LinearRing id="349">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002787002,37.794368199,0.0 -122.40030319831762,37.794363214801635,0.0 -122.40029821411926,37.794338716684024,0.0 -122.40027371600165,37.79434370088238,0.0 -122.4002787002,37.794368199,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="352">
+            <name>621 BATTERY ST
+Post ID: 324-06270, Space ID: 129945
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="351">
+                <outerBoundaryIs>
+                    <LinearRing id="355">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009015986,37.7974549019,0.0 -122.40092609671761,37.797449917701634,0.0 -122.40092111251926,37.79742541958402,0.0 -122.40089661440165,37.79743040378238,0.0 -122.4009015986,37.7974549019,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="358">
+            <name>835 BATTERY ST
+Post ID: 324-08350, Space ID: 108892
+[Type: 15-30 Min Limit]
+(District 3, SFPD Central)</name>
+            <styleUrl>#42</styleUrl>
+            <Polygon id="357">
+                <outerBoundaryIs>
+                    <LinearRing id="361">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4012868979,37.7993743018,0.0 -122.4013113960176,37.79936931760164,0.0 -122.40130641181925,37.79934481948403,0.0 -122.40128191370164,37.79934980368238,0.0 -122.4012868979,37.7993743018,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="364">
+            <name>833 BATTERY ST
+Post ID: 324-08330, Space ID: 124801
+[Type: 15-30 Min Limit]
+(District 3, SFPD Central)</name>
+            <styleUrl>#42</styleUrl>
+            <Polygon id="363">
+                <outerBoundaryIs>
+                    <LinearRing id="367">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4012748,37.7993121975,0.0 -122.4012992981176,37.79930721330164,0.0 -122.40129431391925,37.79928271518403,0.0 -122.40126981580164,37.79928769938238,0.0 -122.4012748,37.7993121975,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="370">
+            <name>425 BATTERY ST
+Post ID: 324-04250, Space ID: 122945
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="369">
+                <outerBoundaryIs>
+                    <LinearRing id="373">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005416014,37.7956426003,0.0 -122.4005660995176,37.79563761610164,0.0 -122.40056111531925,37.795613117984026,0.0 -122.40053661720164,37.79561810218238,0.0 -122.4005416014,37.7956426003,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="376">
+            <name>311 BATTERY ST
+Post ID: 324-03110, Space ID: 105447
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="375">
+                <outerBoundaryIs>
+                    <LinearRing id="379">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002989006,37.7944666025,0.0 -122.40032339871762,37.79446161830164,0.0 -122.40031841451926,37.79443712018403,0.0 -122.40029391640165,37.794442104382384,0.0 -122.4002989006,37.7944666025,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="382">
+            <name>726 BATTERY ST
+Post ID: 324-07260, Space ID: 114762
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="381">
+                <outerBoundaryIs>
+                    <LinearRing id="385">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009250009,37.7983522014,0.0 -122.40094949901761,37.79834721720164,0.0 -122.40094451481926,37.79832271908403,0.0 -122.40092001670165,37.79832770328238,0.0 -122.4009250009,37.7983522014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="388">
+            <name>318 BATTERY ST
+Post ID: 324-03180, Space ID: 111408
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="387">
+                <outerBoundaryIs>
+                    <LinearRing id="391">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001836997,37.7946909972,0.0 -122.4002081978176,37.79468601300164,0.0 -122.40020321361925,37.79466151488403,0.0 -122.40017871550164,37.79466649908238,0.0 -122.4001836997,37.7946909972,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="394">
+            <name>506 BATTERY ST
+Post ID: 324-05060, Space ID: 126379
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="393">
+                <outerBoundaryIs>
+                    <LinearRing id="397">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.400460202,37.7961099026,0.0 -122.40048470011762,37.79610491840164,0.0 -122.40047971591926,37.79608042028403,0.0 -122.40045521780165,37.79608540448238,0.0 -122.400460202,37.7961099026,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="400">
+            <name>724 BATTERY ST
+Post ID: 324-07240, Space ID: 120359
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="399">
+                <outerBoundaryIs>
+                    <LinearRing id="403">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009139982,37.7982981996,0.0 -122.40093849631761,37.798293215401635,0.0 -122.40093351211925,37.798268717284024,0.0 -122.40090901400164,37.79827370148238,0.0 -122.4009139982,37.7982981996,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="406">
+            <name>27 BATTERY ST
+Post ID: 324-00270, Space ID: 101707
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="405">
+                <outerBoundaryIs>
+                    <LinearRing id="409">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997963999,37.792029201,0.0 -122.39982089801761,37.792024216801636,0.0 -122.39981591381925,37.791999718684025,0.0 -122.39979141570164,37.79200470288238,0.0 -122.3997963999,37.792029201,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="412">
+            <name>209 BATTERY ST
+Post ID: 324-02090, Space ID: 112249
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="411">
+                <outerBoundaryIs>
+                    <LinearRing id="415">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001059995,37.7935259015,0.0 -122.40013049761761,37.793520917301635,0.0 -122.40012551341925,37.793496419184024,0.0 -122.40010101530164,37.79350140338238,0.0 -122.4001059995,37.7935259015,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="418">
+            <name>711 BATTERY ST
+Post ID: 324-07110, Space ID: 126028
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="417">
+                <outerBoundaryIs>
+                    <LinearRing id="421">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010035002,37.7979452991,0.0 -122.40102799831762,37.79794031490164,0.0 -122.40102301411926,37.79791581678403,0.0 -122.40099851600165,37.79792080098238,0.0 -122.4010035002,37.7979452991,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="424">
+            <name>113 BATTERY ST
+Post ID: 324-01130, Space ID: 113195
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="423">
+                <outerBoundaryIs>
+                    <LinearRing id="427">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999136013,37.7925932975,0.0 -122.39993809941761,37.792588313301636,0.0 -122.39993311521926,37.792563815184025,0.0 -122.39990861710164,37.79256879938238,0.0 -122.3999136013,37.7925932975,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="430">
+            <name>28 BATTERY ST
+Post ID: 324-00280, Space ID: 103460
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="429">
+                <outerBoundaryIs>
+                    <LinearRing id="433">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3996440002,37.7920636003,0.0 -122.39966849831761,37.792058616101635,0.0 -122.39966351411925,37.792034117984024,0.0 -122.39963901600164,37.79203910218238,0.0 -122.3996440002,37.7920636003,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="436">
+            <name>305 BATTERY ST
+Post ID: 324-03050, Space ID: 116011
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="435">
+                <outerBoundaryIs>
+                    <LinearRing id="439">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002674014,37.7943132975,0.0 -122.40029189951761,37.794308313301634,0.0 -122.40028691531926,37.79428381518402,0.0 -122.40026241720165,37.79428879938238,0.0 -122.4002674014,37.7943132975,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="442">
+            <name>129 BATTERY ST
+Post ID: 324-01290, Space ID: 114810
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="441">
+                <outerBoundaryIs>
+                    <LinearRing id="445">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000036006,37.7930302014,0.0 -122.40002809871761,37.79302521720164,0.0 -122.40002311451926,37.79300071908403,0.0 -122.39999861640165,37.79300570328238,0.0 -122.4000036006,37.7930302014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="448">
+            <name>621 BATTERY ST
+Post ID: 324-06350, Space ID: 129941
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="447">
+                <outerBoundaryIs>
+                    <LinearRing id="451">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009092988,37.7974933022,0.0 -122.40093379691761,37.79748831800164,0.0 -122.40092881271926,37.79746381988403,0.0 -122.40090431460165,37.797468804082385,0.0 -122.4009092988,37.7974933022,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="454">
+            <name>706 BATTERY ST
+Post ID: 324-07060, Space ID: 124193
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="453">
+                <outerBoundaryIs>
+                    <LinearRing id="457">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008205009,37.7978393015,0.0 -122.40084499901761,37.797834317301636,0.0 -122.40084001481925,37.797809819184025,0.0 -122.40081551670164,37.79781480338238,0.0 -122.4008205009,37.7978393015,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="460">
+            <name>303 BATTERY ST
+Post ID: 324-03030, Space ID: 109242
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="459">
+                <outerBoundaryIs>
+                    <LinearRing id="463">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002574996,37.7942653027,0.0 -122.40028199771761,37.794260318501635,0.0 -122.40027701351926,37.794235820384024,0.0 -122.40025251540165,37.79424080458238,0.0 -122.4002574996,37.7942653027,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="466">
+            <name>802 BATTERY ST
+Post ID: 324-08020, Space ID: 107219
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="465">
+                <outerBoundaryIs>
+                    <LinearRing id="469">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009962194,37.7987088056,0.0 -122.40102071751761,37.79870382140164,0.0 -122.40101573331926,37.79867932328403,0.0 -122.40099123520164,37.79868430748238,0.0 -122.4009962194,37.7987088056,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="472">
+            <name>313 BATTERY ST
+Post ID: 324-03130, Space ID: 104203
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="471">
+                <outerBoundaryIs>
+                    <LinearRing id="475">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003144016,37.794526399,0.0 -122.40033889971761,37.794521414801636,0.0 -122.40033391551925,37.794496916684025,0.0 -122.40030941740164,37.79450190088238,0.0 -122.4003144016,37.794526399,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="478">
+            <name>111 BATTERY ST
+Post ID: 324-01110, Space ID: 108709
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="477">
+                <outerBoundaryIs>
+                    <LinearRing id="481">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999024981,37.7925394018,0.0 -122.39992699621762,37.79253441760164,0.0 -122.39992201201926,37.792509919484026,0.0 -122.39989751390165,37.79251490368238,0.0 -122.3999024981,37.7925394018,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="484">
+            <name>509 BATTERY ST
+Post ID: 324-05490, Space ID: 129956
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="483">
+                <outerBoundaryIs>
+                    <LinearRing id="487">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006455985,37.7962238015,0.0 -122.40067009661762,37.796218817301636,0.0 -122.40066511241926,37.796194319184025,0.0 -122.40064061430165,37.79619930338238,0.0 -122.4006455985,37.7962238015,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="490">
+            <name>636 BATTERY ST
+Post ID: 324-06360, Space ID: 101475
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="489">
+                <outerBoundaryIs>
+                    <LinearRing id="493">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4007351005,37.7974207987,0.0 -122.40075959861761,37.79741581450164,0.0 -122.40075461441926,37.79739131638403,0.0 -122.40073011630165,37.797396300582385,0.0 -122.4007351005,37.7974207987,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="496">
+            <name>503 BATTERY ST
+Post ID: 324-05070, Space ID: 130030
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="495">
+                <outerBoundaryIs>
+                    <LinearRing id="499">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.400602102,37.7960100015,0.0 -122.4006266001176,37.79600501730164,0.0 -122.40062161591925,37.79598051918403,0.0 -122.40059711780164,37.79598550338238,0.0 -122.400602102,37.7960100015,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="502">
+            <name>421 BATTERY ST
+Post ID: 324-04210, Space ID: 113221
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="501">
+                <outerBoundaryIs>
+                    <LinearRing id="505">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005142988,37.7954950006,0.0 -122.40053879691762,37.79549001640164,0.0 -122.40053381271926,37.795465518284026,0.0 -122.40050931460165,37.79547050248238,0.0 -122.4005142988,37.7954950006,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="508">
+            <name>101 BATTERY ST
+Post ID: 324-01010, Space ID: 111929
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="507">
+                <outerBoundaryIs>
+                    <LinearRing id="511">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998640028,37.7923520998,0.0 -122.39988850091761,37.792347115601636,0.0 -122.39988351671926,37.792322617484025,0.0 -122.39985901860165,37.79232760168238,0.0 -122.3998640028,37.7923520998,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="514">
+            <name>8 BATTERY ST
+Post ID: 324-00080, Space ID: 111927
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="513">
+                <outerBoundaryIs>
+                    <LinearRing id="517">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3995563981,37.7916382019,0.0 -122.39958089621761,37.79163321770164,0.0 -122.39957591201926,37.791608719584026,0.0 -122.39955141390165,37.79161370378238,0.0 -122.3995563981,37.7916382019,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="520">
+            <name>324 BATTERY ST
+Post ID: 324-03240, Space ID: 105207
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="519">
+                <outerBoundaryIs>
+                    <LinearRing id="523">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002160986,37.7948483982,0.0 -122.40024059671761,37.79484341400164,0.0 -122.40023561251925,37.79481891588403,0.0 -122.40021111440164,37.794823900082385,0.0 -122.4002160986,37.7948483982,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="526">
+            <name>713 BATTERY ST
+Post ID: 324-07130, Space ID: 100700
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="525">
+                <outerBoundaryIs>
+                    <LinearRing id="529">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010163021,37.7980083981,0.0 -122.40104080021761,37.79800341390164,0.0 -122.40103581601926,37.79797891578403,0.0 -122.40101131790165,37.797983899982384,0.0 -122.4010163021,37.7980083981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="532">
+            <name>407 BATTERY ST
+Post ID: 324-04070, Space ID: 116933
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="531">
+                <outerBoundaryIs>
+                    <LinearRing id="535">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004654993,37.7952311997,0.0 -122.40048999741761,37.795226215501636,0.0 -122.40048501321925,37.795201717384025,0.0 -122.40046051510164,37.79520670158238,0.0 -122.4004654993,37.7952311997,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="538">
+            <name>223 BATTERY ST
+Post ID: 324-02230, Space ID: 128976
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="537">
+                <outerBoundaryIs>
+                    <LinearRing id="541">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001650025,37.7938124006,0.0 -122.40018950061761,37.793807416401634,0.0 -122.40018451641926,37.79378291828402,0.0 -122.40016001830165,37.79378790248238,0.0 -122.4001650025,37.7938124006,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="544">
+            <name>801 BATTERY ST
+Post ID: 324-08010, Space ID: 101887
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="543">
+                <outerBoundaryIs>
+                    <LinearRing id="547">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4011569002,37.7987075997,0.0 -122.4011813983176,37.79870261550164,0.0 -122.40117641411925,37.79867811738403,0.0 -122.40115191600164,37.798683101582384,0.0 -122.4011569002,37.7987075997,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="550">
+            <name>301 BATTERY ST
+Post ID: 324-03010, Space ID: 113831
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="549">
+                <outerBoundaryIs>
+                    <LinearRing id="553">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002474022,37.7942163021,0.0 -122.4002719003176,37.794211317901635,0.0 -122.40026691611925,37.794186819784024,0.0 -122.40024241800164,37.79419180398238,0.0 -122.4002474022,37.7942163021,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="556">
+            <name>613 BATTERY ST
+Post ID: 324-06130, Space ID: 110052
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="555">
+                <outerBoundaryIs>
+                    <LinearRing id="559">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008374994,37.7971337018,0.0 -122.40086199751761,37.79712871760164,0.0 -122.40085701331925,37.79710421948403,0.0 -122.40083251520164,37.79710920368238,0.0 -122.4008374994,37.7971337018,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="562">
+            <name>7 BATTERY ST
+Post ID: 324-00070, Space ID: 126359
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="561">
+                <outerBoundaryIs>
+                    <LinearRing id="565">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997058977,37.7915895981,0.0 -122.39973039581761,37.79158461390164,0.0 -122.39972541161926,37.79156011578403,0.0 -122.39970091350165,37.791565099982385,0.0 -122.3997058977,37.7915895981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="568">
+            <name>803 BATTERY ST
+Post ID: 324-08030, Space ID: 115658
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="567">
+                <outerBoundaryIs>
+                    <LinearRing id="571">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4011698977,37.7987744984,0.0 -122.40119439581761,37.79876951420164,0.0 -122.40118941161926,37.79874501608403,0.0 -122.40116491350165,37.79875000028238,0.0 -122.4011698977,37.7987744984,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="574">
+            <name>503 BATTERY ST
+Post ID: 324-05010, Space ID: 110278
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="573">
+                <outerBoundaryIs>
+                    <LinearRing id="577">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005955026,37.795977502,0.0 -122.40062000071761,37.79597251780164,0.0 -122.40061501651925,37.795948019684026,0.0 -122.40059051840164,37.79595300388238,0.0 -122.4005955026,37.795977502,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="580">
+            <name>25 BATTERY ST
+Post ID: 324-00250, Space ID: 121545
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="579">
+                <outerBoundaryIs>
+                    <LinearRing id="583">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997857996,37.7919778981,0.0 -122.39981029771761,37.79197291390164,0.0 -122.39980531351925,37.79194841578403,0.0 -122.39978081540164,37.79195339998238,0.0 -122.3997857996,37.7919778981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="586">
+            <name>110 BATTERY ST
+Post ID: 324-01100, Space ID: 124225
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="585">
+                <outerBoundaryIs>
+                    <LinearRing id="589">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997468014,37.7925677997,0.0 -122.39977129951761,37.79256281550164,0.0 -122.39976631531925,37.79253831738403,0.0 -122.39974181720164,37.792543301582384,0.0 -122.3997468014,37.7925677997,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="592">
+            <name>509 BATTERY ST
+Post ID: 324-05430, Space ID: 129959
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="591">
+                <outerBoundaryIs>
+                    <LinearRing id="595">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006384012,37.7961884019,0.0 -122.40066289931761,37.796183417701634,0.0 -122.40065791511925,37.79615891958402,0.0 -122.40063341700164,37.79616390378238,0.0 -122.4006384012,37.7961884019,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="598">
+            <name>102 BATTERY ST
+Post ID: 324-01020, Space ID: 105406
+[Type: Eliminated]
+(District 3, SFPD Central)</name>
+            <styleUrl>#28</styleUrl>
+            <Polygon id="597">
+                <outerBoundaryIs>
+                    <LinearRing id="601">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997067974,37.7923737028,0.0 -122.39973129551761,37.79236871860164,0.0 -122.39972631131926,37.792344220484026,0.0 -122.39970181320164,37.79234920468238,0.0 -122.3997067974,37.7923737028,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="604">
+            <name>621 BATTERY ST
+Post ID: 324-06230, Space ID: 120473
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="603">
+                <outerBoundaryIs>
+                    <LinearRing id="607">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008965974,37.7974298009,0.0 -122.40092109551762,37.797424816701636,0.0 -122.40091611131926,37.797400318584025,0.0 -122.40089161320165,37.79740530278238,0.0 -122.4008965974,37.7974298009,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="610">
+            <name>5 BATTERY ST
+Post ID: 324-00050, Space ID: 126277
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="609">
+                <outerBoundaryIs>
+                    <LinearRing id="613">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3996945989,37.7915346016,0.0 -122.39971909701761,37.791529617401636,0.0 -122.39971411281925,37.791505119284025,0.0 -122.39968961470164,37.79151010348238,0.0 -122.3996945989,37.7915346016,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="616">
+            <name>626 BATTERY ST
+Post ID: 324-06260, Space ID: 105374
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="615">
+                <outerBoundaryIs>
+                    <LinearRing id="619">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006884021,37.7971869995,0.0 -122.40071290021761,37.79718201530164,0.0 -122.40070791601926,37.797157517184026,0.0 -122.40068341790165,37.79716250138238,0.0 -122.4006884021,37.7971869995,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="622">
+            <name>227 BATTERY ST
+Post ID: 324-02270, Space ID: 103494
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="621">
+                <outerBoundaryIs>
+                    <LinearRing id="625">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001759996,37.7938656983,0.0 -122.4002004977176,37.79386071410164,0.0 -122.40019551351925,37.79383621598403,0.0 -122.40017101540164,37.793841200182385,0.0 -122.4001759996,37.7938656983,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="628">
+            <name>309 BATTERY ST
+Post ID: 324-03090, Space ID: 111366
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="627">
+                <outerBoundaryIs>
+                    <LinearRing id="631">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4002887976,37.7944175013,0.0 -122.40031329571761,37.79441251710164,0.0 -122.40030831151925,37.79438801898403,0.0 -122.40028381340164,37.794393003182385,0.0 -122.4002887976,37.7944175013,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="634">
+            <name>222 BATTERY ST
+Post ID: 324-02220, Space ID: 112250
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="633">
+                <outerBoundaryIs>
+                    <LinearRing id="637">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000058972,37.7938277003,0.0 -122.40003039531761,37.79382271610164,0.0 -122.40002541111926,37.793798217984026,0.0 -122.40000091300165,37.79380320218238,0.0 -122.4000058972,37.7938277003,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="640">
+            <name>505 BATTERY ST
+Post ID: 324-05250, Space ID: 130022
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="639">
+                <outerBoundaryIs>
+                    <LinearRing id="643">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006213021,37.7961042979,0.0 -122.40064580021762,37.79609931370164,0.0 -122.40064081601926,37.79607481558403,0.0 -122.40061631790165,37.79607979978238,0.0 -122.4006213021,37.7961042979,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="646">
+            <name>211 BATTERY ST
+Post ID: 324-02110, Space ID: 102294
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="645">
+                <outerBoundaryIs>
+                    <LinearRing id="649">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.400118902,37.7935886987,0.0 -122.40014340011761,37.79358371450164,0.0 -122.40013841591926,37.793559216384025,0.0 -122.40011391780165,37.79356420058238,0.0 -122.400118902,37.7935886987,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="652">
+            <name>403 BATTERY ST
+Post ID: 324-04030, Space ID: 106718
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="651">
+                <outerBoundaryIs>
+                    <LinearRing id="655">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004429017,37.7951091983,0.0 -122.40046739981761,37.795104214101634,0.0 -122.40046241561926,37.79507971598402,0.0 -122.40043791750165,37.79508470018238,0.0 -122.4004429017,37.7951091983,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="658">
+            <name>206 BATTERY ST
+Post ID: 324-02060, Space ID: 107573
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="657">
+                <outerBoundaryIs>
+                    <LinearRing id="661">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999348019,37.7934827012,0.0 -122.39995930001761,37.793477717001636,0.0 -122.39995431581926,37.793453218884025,0.0 -122.39992981770165,37.79345820308238,0.0 -122.3999348019,37.7934827012,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="664">
+            <name>617 BATTERY ST
+Post ID: 324-06170, Space ID: 104046
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="663">
+                <outerBoundaryIs>
+                    <LinearRing id="667">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008655005,37.7972738025,0.0 -122.40088999861761,37.79726881830164,0.0 -122.40088501441926,37.79724432018403,0.0 -122.40086051630165,37.79724930438238,0.0 -122.4008655005,37.7972738025,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="670">
+            <name>30 BATTERY ST
+Post ID: 324-00300, Space ID: 104099
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="669">
+                <outerBoundaryIs>
+                    <LinearRing id="673">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.399658702,37.7921349023,0.0 -122.39968320011761,37.79212991810164,0.0 -122.39967821591925,37.792105419984026,0.0 -122.39965371780164,37.79211040418238,0.0 -122.399658702,37.7921349023,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="676">
+            <name>705 BATTERY ST
+Post ID: 324-07050, Space ID: 109947
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="675">
+                <outerBoundaryIs>
+                    <LinearRing id="679">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009812993,37.7978367981,0.0 -122.40100579741761,37.79783181390164,0.0 -122.40100081321926,37.79780731578403,0.0 -122.40097631510164,37.79781229998238,0.0 -122.4009812993,37.7978367981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="682">
+            <name>424 BATTERY ST
+Post ID: 324-04240, Space ID: 104123
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="681">
+                <outerBoundaryIs>
+                    <LinearRing id="685">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003782996,37.7957428982,0.0 -122.40040279771762,37.795737914001634,0.0 -122.40039781351926,37.79571341588402,0.0 -122.40037331540165,37.79571840008238,0.0 -122.4003782996,37.7957428982,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="688">
+            <name>509 BATTERY ST
+Post ID: 324-05470, Space ID: 129957
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="687">
+                <outerBoundaryIs>
+                    <LinearRing id="691">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006434024,37.7962127988,0.0 -122.4006679005176,37.79620781460164,0.0 -122.40066291631925,37.796183316484026,0.0 -122.40063841820164,37.79618830068238,0.0 -122.4006434024,37.7962127988,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="694">
+            <name>503 BATTERY ST
+Post ID: 324-05110, Space ID: 130028
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="693">
+                <outerBoundaryIs>
+                    <LinearRing id="697">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006060024,37.7960294028,0.0 -122.40063050051761,37.79602441860164,0.0 -122.40062551631925,37.79599992048403,0.0 -122.40060101820164,37.796004904682384,0.0 -122.4006060024,37.7960294028,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="700">
+            <name>416 BATTERY ST
+Post ID: 324-04160, Space ID: 102264
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="699">
+                <outerBoundaryIs>
+                    <LinearRing id="703">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003373009,37.7955212024,0.0 -122.40036179901762,37.79551621820164,0.0 -122.40035681481926,37.79549172008403,0.0 -122.40033231670165,37.795496704282385,0.0 -122.4003373009,37.7955212024,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="706">
+            <name>623 BATTERY ST
+Post ID: 324-06430, Space ID: 129938
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="705">
+                <outerBoundaryIs>
+                    <LinearRing id="709">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009170995,37.7975326021,0.0 -122.40094159761762,37.797527617901636,0.0 -122.40093661341926,37.797503119784025,0.0 -122.40091211530165,37.79750810398238,0.0 -122.4009170995,37.7975326021,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="712">
+            <name>119 BATTERY ST
+Post ID: 324-01190, Space ID: 108849
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="711">
+                <outerBoundaryIs>
+                    <LinearRing id="715">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999481012,37.7927608014,0.0 -122.3999725993176,37.79275581720164,0.0 -122.39996761511925,37.79273131908403,0.0 -122.39994311700164,37.79273630328238,0.0 -122.3999481012,37.7927608014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="718">
+            <name>715 BATTERY ST
+Post ID: 324-07150, Space ID: 120358
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="717">
+                <outerBoundaryIs>
+                    <LinearRing id="721">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010305011,37.7980779008,0.0 -122.4010549992176,37.79807291660164,0.0 -122.40105001501925,37.79804841848403,0.0 -122.40102551690164,37.798053402682385,0.0 -122.4010305011,37.7980779008,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="724">
+            <name>505 BATTERY ST
+Post ID: 324-05290, Space ID: 130020
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="723">
+                <outerBoundaryIs>
+                    <LinearRing id="727">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006244984,37.7961202011,0.0 -122.40064899651762,37.79611521690164,0.0 -122.40064401231926,37.79609071878403,0.0 -122.40061951420165,37.796095702982385,0.0 -122.4006244984,37.7961202011,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="730">
+            <name>427 BATTERY ST
+Post ID: 324-04270, Space ID: 108870
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="729">
+                <outerBoundaryIs>
+                    <LinearRing id="733">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005533976,37.7957064983,0.0 -122.40057789571762,37.79570151410164,0.0 -122.40057291151926,37.795677015984026,0.0 -122.40054841340165,37.79568200018238,0.0 -122.4005533976,37.7957064983,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="736">
+            <name>628 BATTERY ST
+Post ID: 324-06280, Space ID: 126247
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="735">
+                <outerBoundaryIs>
+                    <LinearRing id="739">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006994997,37.7972424989,0.0 -122.40072399781761,37.797237514701635,0.0 -122.40071901361925,37.797213016584024,0.0 -122.40069451550164,37.79721800078238,0.0 -122.4006994997,37.7972424989,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="742">
+            <name>123 BATTERY ST
+Post ID: 324-01230, Space ID: 119504
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="741">
+                <outerBoundaryIs>
+                    <LinearRing id="745">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999704977,37.7928693973,0.0 -122.39999499581761,37.79286441310164,0.0 -122.39999001161925,37.79283991498403,0.0 -122.39996551350164,37.792844899182384,0.0 -122.3999704977,37.7928693973,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="748">
+            <name>128 BATTERY ST
+Post ID: 324-01280, Space ID: 114809
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="747">
+                <outerBoundaryIs>
+                    <LinearRing id="751">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998497983,37.7930682999,0.0 -122.39987429641761,37.79306331570164,0.0 -122.39986931221925,37.793038817584026,0.0 -122.39984481410164,37.79304380178238,0.0 -122.3998497983,37.7930682999,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="754">
+            <name>207 BATTERY ST
+Post ID: 324-02070, Space ID: 112248
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="753">
+                <outerBoundaryIs>
+                    <LinearRing id="757">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000933987,37.793464898,0.0 -122.4001178968176,37.79345991380164,0.0 -122.40011291261925,37.79343541568403,0.0 -122.40008841450164,37.793440399882385,0.0 -122.4000933987,37.793464898,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="760">
+            <name>420 BATTERY ST
+Post ID: 324-04200, Space ID: 105427
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="759">
+                <outerBoundaryIs>
+                    <LinearRing id="763">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003575013,37.7956305024,0.0 -122.4003819994176,37.79562551820164,0.0 -122.40037701521925,37.79560102008403,0.0 -122.40035251710164,37.795606004282384,0.0 -122.4003575013,37.7956305024,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="766">
+            <name>621 BATTERY ST
+Post ID: 324-06250, Space ID: 129946
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="765">
+                <outerBoundaryIs>
+                    <LinearRing id="769">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008996987,37.7974451006,0.0 -122.40092419681761,37.79744011640164,0.0 -122.40091921261926,37.79741561828403,0.0 -122.40089471450165,37.79742060248238,0.0 -122.4008996987,37.7974451006,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="772">
+            <name>836 BATTERY ST
+Post ID: 324-08360, Space ID: 100959
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="771">
+                <outerBoundaryIs>
+                    <LinearRing id="775">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4011310171,37.7993998041,0.0 -122.40115551521761,37.799394819901636,0.0 -122.40115053101925,37.799370321784025,0.0 -122.40112603290164,37.79937530598238,0.0 -122.4011310171,37.7993998041,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="778">
+            <name>508 BATTERY ST
+Post ID: 324-05080, Space ID: 101729
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="777">
+                <outerBoundaryIs>
+                    <LinearRing id="781">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004726016,37.7961704981,0.0 -122.40049709971761,37.796165513901634,0.0 -122.40049211551926,37.79614101578402,0.0 -122.40046761740165,37.79614599998238,0.0 -122.4004726016,37.7961704981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="784">
+            <name>710 BATTERY ST
+Post ID: 324-07100, Space ID: 137772
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="783">
+                <outerBoundaryIs>
+                    <LinearRing id="787">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008459718,37.7979643216,0.0 -122.4008704699176,37.797959337401636,0.0 -122.40086548571925,37.797934839284025,0.0 -122.40084098760164,37.79793982348238,0.0 -122.4008459718,37.7979643216,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="790">
+            <name>505 BATTERY ST
+Post ID: 324-05210, Space ID: 130024
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="789">
+                <outerBoundaryIs>
+                    <LinearRing id="793">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006169994,37.7960831978,0.0 -122.40064149751761,37.79607821360164,0.0 -122.40063651331926,37.79605371548403,0.0 -122.40061201520165,37.79605869968238,0.0 -122.4006169994,37.7960831978,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="796">
+            <name>106 BATTERY ST
+Post ID: 324-01060, Space ID: 120685
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="795">
+                <outerBoundaryIs>
+                    <LinearRing id="799">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997307976,37.7924904012,0.0 -122.39975529571761,37.792485417001636,0.0 -122.39975031151926,37.792460918884025,0.0 -122.39972581340164,37.79246590308238,0.0 -122.3997307976,37.7924904012,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="802">
+            <name>10 BATTERY ST
+Post ID: 324-00100, Space ID: 113194
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="801">
+                <outerBoundaryIs>
+                    <LinearRing id="805">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3995675013,37.7916918014,0.0 -122.39959199941761,37.79168681720164,0.0 -122.39958701521925,37.791662319084026,0.0 -122.39956251710164,37.79166730328238,0.0 -122.3995675013,37.7916918014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="808">
+            <name>615 BATTERY ST
+Post ID: 324-06150, Space ID: 127899
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="807">
+                <outerBoundaryIs>
+                    <LinearRing id="811">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008514022,37.7972035007,0.0 -122.40087590031762,37.79719851650164,0.0 -122.40087091611926,37.79717401838403,0.0 -122.40084641800165,37.79717900258238,0.0 -122.4008514022,37.7972035007,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="814">
+            <name>503 BATTERY ST
+Post ID: 324-05030, Space ID: 130032
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="813">
+                <outerBoundaryIs>
+                    <LinearRing id="817">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005977993,37.795989002,0.0 -122.40062229741761,37.795984017801636,0.0 -122.40061731321926,37.795959519684025,0.0 -122.40059281510165,37.79596450388238,0.0 -122.4005977993,37.795989002,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="820">
+            <name>127 BATTERY ST
+Post ID: 324-01270, Space ID: 107532
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="819">
+                <outerBoundaryIs>
+                    <LinearRing id="823">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999937993,37.7929825027,0.0 -122.40001829741762,37.79297751850164,0.0 -122.40001331321926,37.792953020384026,0.0 -122.39998881510165,37.79295800458238,0.0 -122.3999937993,37.7929825027,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="826">
+            <name>503 BATTERY ST
+Post ID: 324-05150, Space ID: 130026
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="825">
+                <outerBoundaryIs>
+                    <LinearRing id="829">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006100983,37.7960495976,0.0 -122.40063459641762,37.79604461340164,0.0 -122.40062961221926,37.79602011528403,0.0 -122.40060511410165,37.796025099482385,0.0 -122.4006100983,37.7960495976,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="832">
+            <name>503 BATTERY ST
+Post ID: 324-05050, Space ID: 130031
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="831">
+                <outerBoundaryIs>
+                    <LinearRing id="835">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005999004,37.7959990994,0.0 -122.4006243985176,37.79599411520164,0.0 -122.40061941431925,37.795969617084026,0.0 -122.40059491620164,37.79597460128238,0.0 -122.4005999004,37.7959990994,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="838">
+            <name>830 BATTERY ST
+Post ID: 324-08300, Space ID: 119210
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="837">
+                <outerBoundaryIs>
+                    <LinearRing id="841">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010978971,37.7992300425,0.0 -122.40112239521761,37.79922505830164,0.0 -122.40111741101926,37.799200560184026,0.0 -122.40109291290165,37.79920554438238,0.0 -122.4010978971,37.7992300425,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="844">
+            <name>507 BATTERY ST
+Post ID: 324-05310, Space ID: 100854
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="843">
+                <outerBoundaryIs>
+                    <LinearRing id="847">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006265995,37.7961303991,0.0 -122.40065109761761,37.79612541490164,0.0 -122.40064611341926,37.79610091678403,0.0 -122.40062161530165,37.79610590098238,0.0 -122.4006265995,37.7961303991,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="850">
+            <name>228 BATTERY ST
+Post ID: 324-02280, Space ID: 121972
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="849">
+                <outerBoundaryIs>
+                    <LinearRing id="853">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000317973,37.7939537027,0.0 -122.40005629541761,37.79394871850164,0.0 -122.40005131121926,37.79392422038403,0.0 -122.40002681310165,37.79392920458238,0.0 -122.4000317973,37.7939537027,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="856">
+            <name>422 BATTERY ST
+Post ID: 324-04220, Space ID: 121570
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="855">
+                <outerBoundaryIs>
+                    <LinearRing id="859">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003685989,37.7956902989,0.0 -122.40039309701761,37.795685314701636,0.0 -122.40038811281926,37.795660816584025,0.0 -122.40036361470165,37.79566580078238,0.0 -122.4003685989,37.7956902989,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="862">
+            <name>504 BATTERY ST
+Post ID: 324-05040, Space ID: 126378
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="861">
+                <outerBoundaryIs>
+                    <LinearRing id="865">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004468021,37.796044099,0.0 -122.40047130021762,37.79603911480164,0.0 -122.40046631601926,37.796014616684026,0.0 -122.40044181790165,37.79601960088238,0.0 -122.4004468021,37.796044099,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="868">
+            <name>704 BATTERY ST
+Post ID: 324-07040, Space ID: 128890
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="867">
+                <outerBoundaryIs>
+                    <LinearRing id="871">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008093976,37.797784998,0.0 -122.40083389571761,37.797780013801635,0.0 -122.40082891151926,37.797755515684024,0.0 -122.40080441340164,37.79776049988238,0.0 -122.4008093976,37.797784998,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="874">
+            <name>405 BATTERY ST
+Post ID: 324-04050, Space ID: 127971
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="873">
+                <outerBoundaryIs>
+                    <LinearRing id="877">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004544017,37.7951712021,0.0 -122.40047889981761,37.79516621790164,0.0 -122.40047391561926,37.79514171978403,0.0 -122.40044941750165,37.79514670398238,0.0 -122.4004544017,37.7951712021,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="880">
+            <name>621 BATTERY ST
+Post ID: 324-06330, Space ID: 129942
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="879">
+                <outerBoundaryIs>
+                    <LinearRing id="883">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009077006,37.7974854008,0.0 -122.40093219871761,37.79748041660164,0.0 -122.40092721451926,37.797455918484026,0.0 -122.40090271640165,37.79746090268238,0.0 -122.4009077006,37.7974854008,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="886">
+            <name>612 BATTERY ST
+Post ID: 324-06120, Space ID: 111776
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="885">
+                <outerBoundaryIs>
+                    <LinearRing id="889">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006301981,37.7968952981,0.0 -122.40065469621761,37.796890313901635,0.0 -122.40064971201926,37.796865815784024,0.0 -122.40062521390165,37.79687079998238,0.0 -122.4006301981,37.7968952981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="892">
+            <name>623 BATTERY ST
+Post ID: 324-06470, Space ID: 129936
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="891">
+                <outerBoundaryIs>
+                    <LinearRing id="895">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009207987,37.7975511988,0.0 -122.40094529681761,37.79754621460164,0.0 -122.40094031261926,37.79752171648403,0.0 -122.40091581450164,37.79752670068238,0.0 -122.4009207987,37.7975511988,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="898">
+            <name>609 BATTERY ST
+Post ID: 324-06090, Space ID: 106372
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="897">
+                <outerBoundaryIs>
+                    <LinearRing id="901">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008168017,37.7970299003,0.0 -122.40084129981761,37.797024916101634,0.0 -122.40083631561926,37.79700041798402,0.0 -122.40081181750165,37.79700540218238,0.0 -122.4008168017,37.7970299003,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="904">
+            <name>722 BATTERY ST
+Post ID: 324-07220, Space ID: 119177
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="903">
+                <outerBoundaryIs>
+                    <LinearRing id="907">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009016992,37.7982377996,0.0 -122.40092619731762,37.79823281540164,0.0 -122.40092121311926,37.79820831728403,0.0 -122.40089671500165,37.798213301482384,0.0 -122.4009016992,37.7982377996,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="910">
+            <name>623 BATTERY ST
+Post ID: 324-06490, Space ID: 129935
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="909">
+                <outerBoundaryIs>
+                    <LinearRing id="913">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009230004,37.7975621008,0.0 -122.40094749851761,37.79755711660164,0.0 -122.40094251431925,37.79753261848403,0.0 -122.40091801620164,37.79753760268238,0.0 -122.4009230004,37.7975621008,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="916">
+            <name>834 BATTERY ST
+Post ID: 324-08340, Space ID: 115666
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="915">
+                <outerBoundaryIs>
+                    <LinearRing id="919">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4011197711,37.7993423125,0.0 -122.40114426921761,37.79933732830164,0.0 -122.40113928501925,37.79931283018403,0.0 -122.40111478690164,37.799317814382384,0.0 -122.4011197711,37.7993423125,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="922">
+            <name>522 BATTERY ST
+Post ID: 324-05220, Space ID: 128949
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="921">
+                <outerBoundaryIs>
+                    <LinearRing id="925">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005310011,37.7964570978,0.0 -122.40055549921762,37.79645211360164,0.0 -122.40055051501926,37.79642761548403,0.0 -122.40052601690165,37.79643259968238,0.0 -122.4005310011,37.7964570978,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="928">
+            <name>505 BATTERY ST
+Post ID: 324-05190, Space ID: 130025
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="927">
+                <outerBoundaryIs>
+                    <LinearRing id="931">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006150995,37.7960740001,0.0 -122.40063959761761,37.79606901590164,0.0 -122.40063461341926,37.796044517784026,0.0 -122.40061011530165,37.79604950198238,0.0 -122.4006150995,37.7960740001,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="934">
+            <name>212 BATTERY ST
+Post ID: 324-02120, Space ID: 126402
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="933">
+                <outerBoundaryIs>
+                    <LinearRing id="937">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999598023,37.7936038979,0.0 -122.39998430041761,37.793598913701636,0.0 -122.39997931621926,37.793574415584025,0.0 -122.39995481810165,37.79357939978238,0.0 -122.3999598023,37.7936038979,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="940">
+            <name>623 BATTERY ST
+Post ID: 324-06410, Space ID: 129939
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="939">
+                <outerBoundaryIs>
+                    <LinearRing id="943">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009154008,37.7975237005,0.0 -122.40093989891761,37.79751871630164,0.0 -122.40093491471926,37.79749421818403,0.0 -122.40091041660165,37.79749920238238,0.0 -122.4009154008,37.7975237005,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="946">
+            <name>112 BATTERY ST
+Post ID: 324-01120, Space ID: 126360
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="945">
+                <outerBoundaryIs>
+                    <LinearRing id="949">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997596984,37.7926304013,0.0 -122.39978419651761,37.79262541710164,0.0 -122.39977921231926,37.79260091898403,0.0 -122.39975471420165,37.792605903182384,0.0 -122.3997596984,37.7926304013,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="952">
+            <name>614 BATTERY ST
+Post ID: 324-06140, Space ID: 140148
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="951">
+                <outerBoundaryIs>
+                    <LinearRing id="955">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006370385,37.7969295923,0.0 -122.4006615366176,37.79692460810164,0.0 -122.40065655241925,37.79690010998403,0.0 -122.40063205430164,37.796905094182385,0.0 -122.4006370385,37.7969295923,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="958">
+            <name>503 BATTERY ST
+Post ID: 324-05090, Space ID: 130029
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="957">
+                <outerBoundaryIs>
+                    <LinearRing id="961">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006041025,37.7960200989,0.0 -122.40062860061761,37.79601511470164,0.0 -122.40062361641925,37.79599061658403,0.0 -122.40059911830164,37.79599560078238,0.0 -122.4006041025,37.7960200989,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="964">
+            <name>832 BATTERY ST
+Post ID: 324-08320, Space ID: 119211
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="963">
+                <outerBoundaryIs>
+                    <LinearRing id="967">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4011090174,37.7992873022,0.0 -122.40113351551761,37.79928231800164,0.0 -122.40112853131926,37.799257819884026,0.0 -122.40110403320165,37.79926280408238,0.0 -122.4011090174,37.7992873022,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="970">
+            <name>507 BATTERY ST
+Post ID: 324-05370, Space ID: 130017
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="969">
+                <outerBoundaryIs>
+                    <LinearRing id="973">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006328021,37.7961606019,0.0 -122.40065730021762,37.796155617701636,0.0 -122.40065231601926,37.796131119584025,0.0 -122.40062781790165,37.79613610378238,0.0 -122.4006328021,37.7961606019,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="976">
+            <name>509 BATTERY ST
+Post ID: 324-05450, Space ID: 129958
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="975">
+                <outerBoundaryIs>
+                    <LinearRing id="979">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006409996,37.7962010027,0.0 -122.40066549771761,37.79619601850164,0.0 -122.40066051351926,37.79617152038403,0.0 -122.40063601540164,37.796176504582384,0.0 -122.4006409996,37.7962010027,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="982">
+            <name>611 BATTERY ST
+Post ID: 324-06110, Space ID: 107193
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="981">
+                <outerBoundaryIs>
+                    <LinearRing id="985">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008283016,37.7970878025,0.0 -122.40085279971761,37.79708281830164,0.0 -122.40084781551926,37.79705832018403,0.0 -122.40082331740165,37.797063304382384,0.0 -122.4008283016,37.7970878025,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="988">
+            <name>114 BATTERY ST
+Post ID: 324-01140, Space ID: 108848
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="987">
+                <outerBoundaryIs>
+                    <LinearRing id="991">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997723998,37.7926922989,0.0 -122.39979689791761,37.79268731470164,0.0 -122.39979191371926,37.79266281658403,0.0 -122.39976741560164,37.79266780078238,0.0 -122.3997723998,37.7926922989,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="994">
+            <name>507 BATTERY ST
+Post ID: 324-05350, Space ID: 130018
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="993">
+                <outerBoundaryIs>
+                    <LinearRing id="997">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006307011,37.7961504989,0.0 -122.40065519921761,37.796145514701635,0.0 -122.40065021501925,37.796121016584024,0.0 -122.40062571690164,37.79612600078238,0.0 -122.4006307011,37.7961504989,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1000">
+            <name>423 BATTERY ST
+Post ID: 324-04230, Space ID: 116934
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="999">
+                <outerBoundaryIs>
+                    <LinearRing id="1003">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4005274975,37.7955664982,0.0 -122.4005519956176,37.79556151400164,0.0 -122.40054701141925,37.79553701588403,0.0 -122.40052251330164,37.795542000082385,0.0 -122.4005274975,37.7955664982,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1006">
+            <name>315 BATTERY ST
+Post ID: 324-03150, Space ID: 113832
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1005">
+                <outerBoundaryIs>
+                    <LinearRing id="1009">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4003251974,37.7945814011,0.0 -122.4003496955176,37.794576416901634,0.0 -122.40034471131925,37.79455191878402,0.0 -122.40032021320164,37.79455690298238,0.0 -122.4003251974,37.7945814011,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1012">
+            <name>618 BATTERY ST
+Post ID: 324-06180, Space ID: 113132
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1011">
+                <outerBoundaryIs>
+                    <LinearRing id="1015">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006549974,37.7970198979,0.0 -122.40067949551761,37.79701491370164,0.0 -122.40067451131925,37.79699041558403,0.0 -122.40065001320164,37.79699539978238,0.0 -122.4006549974,37.7970198979,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1018">
+            <name>634 BATTERY ST
+Post ID: 324-06340, Space ID: 114761
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1017">
+                <outerBoundaryIs>
+                    <LinearRing id="1021">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4007245001,37.7973677021,0.0 -122.40074899821761,37.797362717901635,0.0 -122.40074401401925,37.797338219784024,0.0 -122.40071951590164,37.79734320398238,0.0 -122.4007245001,37.7973677021,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1024">
+            <name>621 BATTERY ST
+Post ID: 324-06310, Space ID: 129943
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1023">
+                <outerBoundaryIs>
+                    <LinearRing id="1027">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009057001,37.7974755996,0.0 -122.40093019821761,37.797470615401636,0.0 -122.40092521401925,37.797446117284025,0.0 -122.40090071590164,37.79745110148238,0.0 -122.4009057001,37.7974755996,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1030">
+            <name>320 BATTERY ST
+Post ID: 324-03200, Space ID: 106744
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1029">
+                <outerBoundaryIs>
+                    <LinearRing id="1033">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001943001,37.7947426018,0.0 -122.40021879821761,37.79473761760164,0.0 -122.40021381401925,37.79471311948403,0.0 -122.40018931590164,37.794718103682385,0.0 -122.4001943001,37.7947426018,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1036">
+            <name>19 BATTERY ST
+Post ID: 324-00190, Space ID: 127946
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1035">
+                <outerBoundaryIs>
+                    <LinearRing id="1039">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997451027,37.7917800014,0.0 -122.3997696008176,37.79177501720164,0.0 -122.39976461661925,37.791750519084026,0.0 -122.39974011850164,37.79175550328238,0.0 -122.3997451027,37.7917800014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1042">
+            <name>117 BATTERY ST
+Post ID: 324-01170, Space ID: 111930
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1041">
+                <outerBoundaryIs>
+                    <LinearRing id="1045">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999377021,37.7927102026,0.0 -122.39996220021762,37.792705218401636,0.0 -122.39995721601926,37.792680720284025,0.0 -122.39993271790165,37.79268570448238,0.0 -122.3999377021,37.7927102026,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1048">
+            <name>15 BATTERY ST
+Post ID: 324-00150, Space ID: 126278
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1047">
+                <outerBoundaryIs>
+                    <LinearRing id="1051">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997339995,37.7917261002,0.0 -122.39975849761761,37.79172111600164,0.0 -122.39975351341926,37.79169661788403,0.0 -122.39972901530165,37.791701602082384,0.0 -122.3997339995,37.7917261002,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1054">
+            <name>620 BATTERY ST
+Post ID: 324-06200, Space ID: 125024
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1053">
+                <outerBoundaryIs>
+                    <LinearRing id="1057">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006678999,37.7970840027,0.0 -122.40069239801761,37.797079018501634,0.0 -122.40068741381926,37.79705452038402,0.0 -122.40066291570164,37.79705950458238,0.0 -122.4006678999,37.7970840027,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1060">
+            <name>505 BATTERY ST
+Post ID: 324-05230, Space ID: 130023
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1059">
+                <outerBoundaryIs>
+                    <LinearRing id="1063">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006185026,37.7960907974,0.0 -122.40064300071761,37.796085813201636,0.0 -122.40063801651925,37.796061315084025,0.0 -122.40061351840164,37.79606629928238,0.0 -122.4006185026,37.7960907974,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1066">
+            <name>640 BATTERY ST
+Post ID: 324-06400, Space ID: 111902
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1065">
+                <outerBoundaryIs>
+                    <LinearRing id="1069">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4007605982,37.7975483992,0.0 -122.4007850963176,37.797543415001634,0.0 -122.40078011211925,37.79751891688402,0.0 -122.40075561400164,37.79752390108238,0.0 -122.4007605982,37.7975483992,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1072">
+            <name>703 BATTERY ST
+Post ID: 324-07030, Space ID: 107495
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1071">
+                <outerBoundaryIs>
+                    <LinearRing id="1075">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009724983,37.7977934972,0.0 -122.40099699641762,37.797788513001635,0.0 -122.40099201221926,37.797764014884024,0.0 -122.40096751410165,37.79776899908238,0.0 -122.4009724983,37.7977934972,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1078">
+            <name>621 BATTERY ST
+Post ID: 324-06370, Space ID: 129940
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1077">
+                <outerBoundaryIs>
+                    <LinearRing id="1081">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009113998,37.7975040981,0.0 -122.4009358979176,37.79749911390164,0.0 -122.40093091371925,37.797474615784026,0.0 -122.40090641560164,37.79747959998238,0.0 -122.4009113998,37.7975040981,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1084">
+            <name>505 BATTERY ST
+Post ID: 324-05170, Space ID: 103854
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1083">
+                <outerBoundaryIs>
+                    <LinearRing id="1087">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006127023,37.7960620978,0.0 -122.4006372004176,37.796057113601634,0.0 -122.40063221621925,37.79603261548402,0.0 -122.40060771810164,37.79603759968238,0.0 -122.4006127023,37.7960620978,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1090">
+            <name>805 BATTERY ST
+Post ID: 324-08050, Space ID: 111729
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1089">
+                <outerBoundaryIs>
+                    <LinearRing id="1093">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4011815988,37.7988341999,0.0 -122.4012060969176,37.79882921570164,0.0 -122.40120111271925,37.79880471758403,0.0 -122.40117661460164,37.79880970178238,0.0 -122.4011815988,37.7988341999,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1096">
+            <name>210 BATTERY ST
+Post ID: 324-02100, Space ID: 113243
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1095">
+                <outerBoundaryIs>
+                    <LinearRing id="1099">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999474977,37.7935441014,0.0 -122.39997199581761,37.79353911720164,0.0 -122.39996701161925,37.79351461908403,0.0 -122.39994251350164,37.793519603282384,0.0 -122.3999474977,37.7935441014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1102">
+            <name>306 BATTERY ST
+Post ID: 324-03060, Space ID: 112251
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1101">
+                <outerBoundaryIs>
+                    <LinearRing id="1105">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001146999,37.7943562017,0.0 -122.40013919801761,37.794351217501635,0.0 -122.40013421381926,37.794326719384024,0.0 -122.40010971570165,37.79433170358238,0.0 -122.4001146999,37.7943562017,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1108">
+            <name>831 BATTERY ST
+Post ID: 324-08310, Space ID: 109791
+[Type: 15-30 Min Limit]
+(District 3, SFPD Central)</name>
+            <styleUrl>#42</styleUrl>
+            <Polygon id="1107">
+                <outerBoundaryIs>
+                    <LinearRing id="1111">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4012636018,37.7992547982,0.0 -122.40128809991761,37.79924981400164,0.0 -122.40128311571925,37.79922531588403,0.0 -122.40125861760164,37.799230300082385,0.0 -122.4012636018,37.7992547982,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1114">
+            <name>505 BATTERY ST
+Post ID: 324-05270, Space ID: 130021
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1113">
+                <outerBoundaryIs>
+                    <LinearRing id="1117">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006230009,37.7961127021,0.0 -122.40064749901761,37.796107717901634,0.0 -122.40064251481925,37.79608321978402,0.0 -122.40061801670164,37.79608820398238,0.0 -122.4006230009,37.7961127021,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1120">
+            <name>507 BATTERY ST
+Post ID: 324-05390, Space ID: 130016
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1119">
+                <outerBoundaryIs>
+                    <LinearRing id="1123">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006345009,37.7961690006,0.0 -122.40065899901761,37.79616401640164,0.0 -122.40065401481925,37.79613951828403,0.0 -122.40062951670164,37.796144502482385,0.0 -122.4006345009,37.7961690006,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1126">
+            <name>621 BATTERY ST
+Post ID: 324-06290, Space ID: 129944
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1125">
+                <outerBoundaryIs>
+                    <LinearRing id="1129">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4009038002,37.7974656978,0.0 -122.40092829831761,37.79746071360164,0.0 -122.40092331411925,37.797436215484026,0.0 -122.40089881600164,37.79744119968238,0.0 -122.4009038002,37.7974656978,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1132">
+            <name>619 BATTERY ST
+Post ID: 324-06190, Space ID: 102221
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1131">
+                <outerBoundaryIs>
+                    <LinearRing id="1135">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008767993,37.7973304977,0.0 -122.4009012974176,37.79732551350164,0.0 -122.40089631321925,37.79730101538403,0.0 -122.40087181510164,37.797305999582385,0.0 -122.4008767993,37.7973304977,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1138">
+            <name>638 BATTERY ST
+Post ID: 324-06380, Space ID: 106392
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1137">
+                <outerBoundaryIs>
+                    <LinearRing id="1141">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4007470977,37.7974807014,0.0 -122.40077159581762,37.797475717201635,0.0 -122.40076661161926,37.797451219084024,0.0 -122.40074211350165,37.79745620328238,0.0 -122.4007470977,37.7974807014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1144">
+            <name>205 BATTERY ST
+Post ID: 324-02050, Space ID: 105446
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1143">
+                <outerBoundaryIs>
+                    <LinearRing id="1147">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4000796021,37.7933975019,0.0 -122.40010410021762,37.79339251770164,0.0 -122.40009911601926,37.79336801958403,0.0 -122.40007461790165,37.793373003782385,0.0 -122.4000796021,37.7933975019,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1150">
+            <name>22 BATTERY ST
+Post ID: 324-00220, Space ID: 121544
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1149">
+                <outerBoundaryIs>
+                    <LinearRing id="1153">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3996164014,37.791929501,0.0 -122.3996408995176,37.791924516801636,0.0 -122.39963591531925,37.791900018684025,0.0 -122.39961141720164,37.79190500288238,0.0 -122.3996164014,37.791929501,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1156">
+            <name>124 BATTERY ST
+Post ID: 324-01240, Space ID: 124226
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="1155">
+                <outerBoundaryIs>
+                    <LinearRing id="1159">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3998264016,37.7929543004,0.0 -122.3998508997176,37.792949316201636,0.0 -122.39984591551925,37.792924818084025,0.0 -122.39982141740164,37.79292980228238,0.0 -122.3998264016,37.7929543004,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1162">
+            <name>409 BATTERY ST
+Post ID: 324-04090, Space ID: 108868
+[Type: Commercial Trucks Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#35</styleUrl>
+            <Polygon id="1161">
+                <outerBoundaryIs>
+                    <LinearRing id="1165">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4004758985,37.7952877999,0.0 -122.40050039661762,37.79528281570164,0.0 -122.40049541241926,37.79525831758403,0.0 -122.40047091430165,37.795263301782384,0.0 -122.4004758985,37.7952877999,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1168">
+            <name>507 BATTERY ST
+Post ID: 324-05330, Space ID: 130019
+[Type: Motorcycle]
+(District 3, SFPD Central)</name>
+            <styleUrl>#14</styleUrl>
+            <Polygon id="1167">
+                <outerBoundaryIs>
+                    <LinearRing id="1171">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4006284994,37.7961396025,0.0 -122.40065299751761,37.796134618301636,0.0 -122.40064801331926,37.796110120184025,0.0 -122.40062351520164,37.79611510438238,0.0 -122.4006284994,37.7961396025,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1174">
+            <name>220 BATTERY ST
+Post ID: 324-02200, Space ID: 111365
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1173">
+                <outerBoundaryIs>
+                    <LinearRing id="1177">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3999927991,37.7937644002,0.0 -122.40001729721762,37.793759416001635,0.0 -122.40001231301926,37.793734917884024,0.0 -122.39998781490165,37.79373990208238,0.0 -122.3999927991,37.7937644002,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1180">
+            <name>622 BATTERY ST
+Post ID: 324-06220, Space ID: 108382
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1179">
+                <outerBoundaryIs>
+                    <LinearRing id="1183">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.400678802,37.797138798,0.0 -122.40070330011761,37.797133813801636,0.0 -122.40069831591926,37.797109315684025,0.0 -122.40067381780165,37.79711429988238,0.0 -122.400678802,37.797138798,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1186">
+            <name>221 BATTERY ST
+Post ID: 324-02210, Space ID: 103493
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1185">
+                <outerBoundaryIs>
+                    <LinearRing id="1189">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4001525023,37.7937515982,0.0 -122.40017700041761,37.793746614001634,0.0 -122.40017201621926,37.79372211588402,0.0 -122.40014751810165,37.79372710008238,0.0 -122.4001525023,37.7937515982,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1192">
+            <name>2 BATTERY ST
+Post ID: 324-00020, Space ID: 104785
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1191">
+                <outerBoundaryIs>
+                    <LinearRing id="1195">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3995198027,37.7914603994,0.0 -122.39954430081761,37.79145541520164,0.0 -122.39953931661925,37.79143091708403,0.0 -122.39951481850164,37.791435901282384,0.0 -122.3995198027,37.7914603994,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1198">
+            <name>824 BATTERY ST
+Post ID: 324-08240, Space ID: 101888
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1197">
+                <outerBoundaryIs>
+                    <LinearRing id="1201">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010753525,37.7991144985,0.0 -122.40109985061761,37.79910951430164,0.0 -122.40109486641926,37.79908501618403,0.0 -122.40107036830165,37.799090000382385,0.0 -122.4010753525,37.7991144985,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1204">
+            <name>24 BATTERY ST
+Post ID: 324-00240, Space ID: 101706
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1203">
+                <outerBoundaryIs>
+                    <LinearRing id="1207">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3996292983,37.7919921976,0.0 -122.39965379641761,37.79198721340164,0.0 -122.39964881221925,37.79196271528403,0.0 -122.39962431410164,37.791967699482385,0.0 -122.3996292983,37.7919921976,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1210">
+            <name>4 BATTERY ST
+Post ID: 324-00040, Space ID: 108425
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1209">
+                <outerBoundaryIs>
+                    <LinearRing id="1213">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3995326997,37.7915231016,0.0 -122.39955719781761,37.79151811740164,0.0 -122.39955221361926,37.791493619284026,0.0 -122.39952771550165,37.79149860348238,0.0 -122.3995326997,37.7915231016,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1216">
+            <name>230 BATTERY ST
+Post ID: 324-02300, Space ID: 106735
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1215">
+                <outerBoundaryIs>
+                    <LinearRing id="1219">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.400043599,37.7940110014,0.0 -122.40006809711761,37.79400601720164,0.0 -122.40006311291926,37.79398151908403,0.0 -122.40003861480164,37.79398650328238,0.0 -122.400043599,37.7940110014,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1222">
+            <name>6 BATTERY ST
+Post ID: 324-00060, Space ID: 108426
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1221">
+                <outerBoundaryIs>
+                    <LinearRing id="1225">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3995456022,37.7915855021,0.0 -122.39957010031762,37.791580517901636,0.0 -122.39956511611926,37.791556019784025,0.0 -122.39954061800165,37.79156100398238,0.0 -122.3995456022,37.7915855021,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1228">
+            <name>822 BATTERY ST
+Post ID: 324-08220, Space ID: 111073
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1227">
+                <outerBoundaryIs>
+                    <LinearRing id="1231">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010637083,37.7990547774,0.0 -122.40108820641761,37.79904979320164,0.0 -122.40108322221926,37.79902529508403,0.0 -122.40105872410165,37.799030279282384,0.0 -122.4010637083,37.7990547774,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1234">
+            <name>322 BATTERY ST
+Post ID: 324-03220, Space ID: 112255
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1233">
+                <outerBoundaryIs>
+                    <LinearRing id="1237">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.400204498,37.7947920998,0.0 -122.4002289961176,37.794787115601636,0.0 -122.40022401191925,37.794762617484025,0.0 -122.40019951380164,37.79476760168238,0.0 -122.400204498,37.7947920998,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1240">
+            <name>708 BATTERY ST
+Post ID: 324-07080, Space ID: 102222
+[Type: Commercial Only]
+(District 3, SFPD Central)</name>
+            <styleUrl>#7</styleUrl>
+            <Polygon id="1239">
+                <outerBoundaryIs>
+                    <LinearRing id="1243">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4008331017,37.7979015009,0.0 -122.40085759981761,37.797896516701634,0.0 -122.40085261561926,37.79787201858402,0.0 -122.40082811750165,37.79787700278238,0.0 -122.4008331017,37.7979015009,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1246">
+            <name>808 BATTERY ST
+Post ID: 324-08080, Space ID: 100282
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1245">
+                <outerBoundaryIs>
+                    <LinearRing id="1249">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.4010146148,37.7988029064,0.0 -122.40103911291762,37.798797922201636,0.0 -122.40103412871926,37.798773424084025,0.0 -122.40100963060165,37.79877840828238,0.0 -122.4010146148,37.7988029064,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1252">
+            <name>23 BATTERY ST
+Post ID: 324-00230, Space ID: 111928
+[Type: Residential]
+(District 3, SFPD Central)</name>
+            <styleUrl>#21</styleUrl>
+            <Polygon id="1251">
+                <outerBoundaryIs>
+                    <LinearRing id="1255">
+                        <gx:altitudeOffset>10</gx:altitudeOffset>
+                        <coordinates>-122.3997712989,37.7919073001,0.0 -122.39979579701762,37.79190231590164,0.0 -122.39979081281926,37.79187781778403,0.0 -122.39976631470165,37.79188280198238,0.0 -122.3997712989,37.7919073001,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1258">
+            <name>Battery St &amp; Broadway &amp; Broadway Street, from Broadway to 30 feet northerly (enacted 9/1/2015) on the east side of the street.
+Length: 30</name>
+            <styleUrl>#0</styleUrl>
+            <Polygon id="1257">
+                <outerBoundaryIs>
+                    <LinearRing id="1261">
+                        <coordinates>-122.401,37.798748,0.0 -122.40102449811761,37.79874301580164,0.0 -122.40101253604153,37.798684220319366,0.0 -122.40098803792394,37.79868920451773,0.0 -122.401,37.798748,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark id="1264">
+            <name>Battery St &amp; Broadway &amp; Broadway Street, from Broadway to 30 feet northerly (enacted 9/1/2015) on the west side of the street.
+Length: 30</name>
+            <styleUrl>#0</styleUrl>
+            <Polygon id="1263">
+                <outerBoundaryIs>
+                    <LinearRing id="1267">
+                        <coordinates>-122.40117,37.798737,0.0 -122.4011944981176,37.79873201580164,0.0 -122.40118253604153,37.798673220319365,0.0 -122.40115803792393,37.79867820451773,0.0 -122.40117,37.798737,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+    </Document>
+</kml>

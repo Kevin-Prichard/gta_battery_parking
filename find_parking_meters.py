@@ -252,11 +252,3 @@ def main_sanity_check():
 if __name__ == "__main__":
     d = make_battery_sansome_qb_map("Battery Street Parking Spaces")
     d.save("better.kml")
-
-"""
-Next up-
-Check that CBD boundaries really match the map, and cover the other side of the street
-Add Sansome like Battery
-Perform neighboring street-block analysis, 1-block, 2-block, for space loss impact
-Bonus points: removing 2-3 spaces per intersection for loading zones
-"""

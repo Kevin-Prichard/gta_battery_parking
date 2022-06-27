@@ -1,5 +1,6 @@
 import csv
 import json
+import re
 from math import radians, cos, sin
 import random
 
@@ -57,3 +58,20 @@ def make_stylemap(cols_widths: dict):  # norm_col, norm_width, hi_col, hi_width
 def random_color():
     r = lambda: random.randint(0, 255)
     return '#FF{:02X}{:02X}{:02X}'.format(r(), r(), r())
+
+
+def wkt_to_kml(wkt, doc, dry=False):
+    if not wkt:
+        return {"type": "", "coords": ""}
+
+    parts = re.match(r"(\w+) \(+([^)]*)\)+", wkt)
+    splitted = re.findall(r"[^ ,]+", parts.group(2))
+    spl = [float(i) for i in splitted]
+    coords = list(zip(spl[::2], spl[1::2]))
+
+    if not dry:
+        k = doc.newlinestring(name="abc")
+        k.coords = coords
+        k.style.linestyle.color = random_color()
+        k.style.linestyle.width = 12
+    return {"type": parts.group(1), "coords": coords}

@@ -1,19 +1,15 @@
 #!/usr/bin/env python3.10
-
-import logging
-import re
 from collections import defaultdict
 from decimal import Decimal
+import logging
 
 import matplotlib.pyplot as plt
-import simplekml
-from pyproj import CRS
 from shapely.geometry import Point, Polygon
+import simplekml
 
-from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, random_color
+from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, wkt_to_kml
 
 logger = logging.getLogger(__name__)
-earth = CRS("ESRI:54009")
 
 
 # Based upon https://www.usna.edu/Users/oceano/pguth/md_help/html/approx_equivalents.htm
@@ -71,27 +67,27 @@ meter_types = {
 
 boundaries = {
     "cbd_fidi": {
-        "b": load_boundary_file("data/downtownsf_cbd_fidi_boundaries.json"),
+        "b": load_boundary_file("data/downtownsf_cbd_fidi.json.poly"),
         "n": "Downtown SF CBD Financial District",
         "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
     },
     "cbd_jackson": {
-        "b": load_boundary_file("data/downtownsf_cbd_jackson_sq_boundaries.json"),
+        "b": load_boundary_file("data/downtownsf_cbd_jackson_sq.json.poly"),
         "n": "Downtown SF CBD Jackson Square",
         "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
     },
     "battery": {
-        "b": load_boundary_file("data/battery_qb_boundaries.json"),
+        "b": load_boundary_file("data/battery_qb.json.poly"),
         "n": "Battery Street Quick Build Area",
         "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
     },
     "battery_adjacent": {
-        "b": load_boundary_file("data/battery_adjacent_parking_boundaries.json"),
+        "b": load_boundary_file("data/battery_adjacent_parking.json.poly"),
         "n": "Battery Street Adjacent Parking Area",
         "c": make_stylemap({"ncol": "5014F0F0", "nwidth": 4, "hcol": "5014F0F0", "hwidth": 16}),
     },
     "sansome": {
-        "b": load_boundary_file("data/sansome_qb_boundaries.json"),
+        "b": load_boundary_file("data/sansome_qb.json.poly"),
         "n": "Sansome Street Quick Build Area",
         "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
     },
@@ -114,8 +110,7 @@ def add_blue_zones(doc, battery_bounds):
     zone_count = 0
     for bz in load_tsv("data/Accessible_Curb__Blue_Zone_.tsv"):
         if not bz["shape"]:
-            # print(json.dumps(bz, indent=4, sort_keys=True))
-            continue
+           continue
         pt = wkt_to_kml(bz["shape"], doc, True)
         x, y = pt['coords'][0][0], pt['coords'][0][1]
         if not battery_bounds.contains(Point(x, y)):
@@ -205,23 +200,6 @@ def add_meters(doc):
         print(f"{meter_desc[k]}\t{v}\t{both}\t{bat_east}\t" +
               f"{round(both / mtype_batadj[k] * 100, 2)}%\t"
               f"{round(bat_east / mtype_batadj[k] * 100, 2)}%")
-
-
-def wkt_to_kml(wkt, doc, dry=False):
-    if not wkt:
-        return {"type": "", "coords": ""}
-
-    parts = re.match(r"(\w+) \(+([^)]*)\)+", wkt)
-    splitted = re.findall(r"[^ ,]+", parts.group(2))
-    spl = [float(i) for i in splitted]
-    coords = list(zip(spl[::2], spl[1::2]))
-
-    if not dry:
-        k = doc.newlinestring(name="abc")
-        k.coords = coords
-        k.style.linestyle.color = random_color()
-        k.style.linestyle.width = 12
-    return {"type": parts.group(1), "coords": coords}
 
 
 def make_battery_sansome_qb_map(name):

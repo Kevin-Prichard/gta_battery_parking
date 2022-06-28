@@ -8,6 +8,8 @@ import simplekml
 from shapely.geometry import Polygon
 
 
+K = simplekml
+
 def rotate2d(point, angle, center=(0, 0)):
     rads = radians(angle % 360)
     new_pt = (point[0] - center[0], point[1] - center[1])
@@ -36,16 +38,15 @@ def load_boundary_file(fname, pruncate=0):
 
 
 def make_stylemap(cols_widths: dict):  # norm_col, norm_width, hi_col, hi_width
-    k = simplekml
-    sm = k.StyleMap()
-    norm = k.Style()
+    sm = K.StyleMap()
+    norm = K.Style()
     norm.linestyle.color = cols_widths["ncol"]
     norm.linestyle.width = cols_widths["nwidth"]
     norm.polystyle.color = cols_widths["ncol"]
     norm.polystyle.fill = 1
     norm.polystyle.outline = 1
     sm.normalstyle = norm
-    hilite = k.Style()
+    hilite = K.Style()
     hilite.linestyle.color = cols_widths["hcol"]
     hilite.linestyle.width = cols_widths["hwidth"]
     hilite.polystyle.color = cols_widths["hcol"]
@@ -70,8 +71,14 @@ def wkt_to_kml(wkt, doc, dry=False):
     coords = list(zip(spl[::2], spl[1::2]))
 
     if not dry:
-        k = doc.newlinestring(name="abc")
-        k.coords = coords
-        k.style.linestyle.color = random_color()
-        k.style.linestyle.width = 12
+        K = doc.newlinestring(name="abc")
+        K.coords = coords
+        K.style.linestyle.color = random_color()
+        K.style.linestyle.width = 12
     return {"type": parts.group(1), "coords": coords}
+
+
+def print_dict(d, label):
+    print(label)
+    for k, v in d.items():
+        print(f"{k}\t{v}")

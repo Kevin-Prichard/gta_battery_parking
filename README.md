@@ -15,7 +15,7 @@ Definitions are drawn using this polyline tool website, which allows one to draw
 
 It produces two things: a list of lat/lon coordinates, and a JSON containing those coordinates.
 
-That format is preserved when storing those definitions in this project, because: the JSON is imported by find_parking_meters.py (via `load_boundary_file()` from utils.py), and the lat/lon list super-useful whenever the boundaries need adjusting.  The list can be copy-pasted into the import box of the Keene State Polyline tool.
+That format is preserved when storing those definitions in this project, because: the JSON is imported by find_parking_meters.py (via `load_boundary_file()` from utils.py, which retrieves only the JSON.) The lat/lon list super-useful whenever the boundaries need adjusting.  The list can be copy-pasted directly to the import box of the [Keene State Polyline tool](https://www.keene.edu/campus/maps/tool/).
 
 ### Incorporating SF Data
 Much of San Francisco's data regime is provided as single tables that can be exported as TSV.  Those files are downloaded to ./data, and imported using `load_tsv()`.

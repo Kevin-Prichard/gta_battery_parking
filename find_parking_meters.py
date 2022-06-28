@@ -1,16 +1,17 @@
 #!/usr/bin/env python3.10
-from collections import defaultdict
-from decimal import Decimal
 import logging
+from collections import defaultdict
+from decimal import Decimal, InvalidOperation
 
 import matplotlib.pyplot as plt
-from shapely.geometry import Point, Polygon
+from polycircles import polycircles
 import simplekml
+from shapely.geometry import Point, Polygon
 
-from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, wkt_to_kml
+from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, wkt_to_kml, print_dict
 
 logger = logging.getLogger(__name__)
-
+K = simplekml
 
 # Based upon https://www.usna.edu/Users/oceano/pguth/md_help/html/approx_equivalents.htm
 # 0.00001 deg = 1.11 m
@@ -91,6 +92,16 @@ boundaries = {
         "n": "Sansome Street Quick Build Area",
         "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
     },
+    "contractors": {
+        "b": load_boundary_file("data/contractor_spaces_zone.json.poly"),
+        "n": "Area within which we'll search for contractor spaces: yellow and red caps",
+        "c": make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
+    },
+    "contractors2": {
+        "b": load_boundary_file("data/contractor_tighter.json.poly"),
+        "n": "Area #2 within which we'll search for contractor spaces: yellow and red caps",
+        "c": make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
+    },
 }
 
 
@@ -110,7 +121,7 @@ def add_blue_zones(doc, battery_bounds):
     zone_count = 0
     for bz in load_tsv("data/Accessible_Curb__Blue_Zone_.tsv"):
         if not bz["shape"]:
-           continue
+            continue
         pt = wkt_to_kml(bz["shape"], doc, True)
         x, y = pt['coords'][0][0], pt['coords'][0][1]
         if not battery_bounds.contains(Point(x, y)):
@@ -139,6 +150,7 @@ def add_meters(doc):
     mtype_cbd = defaultdict(int)
     mtypes_battery_east = defaultdict(int)
     mtypes_battery_west = defaultdict(int)
+    post_ids = defaultdict(int)
     for pm in load_tsv("data/Parking_Meters.tsv"):
         p = Point(Decimal(pm["LONGITUDE"]), Decimal(pm["LATITUDE"]))
         pm_battery = battery.contains(p) and pm["STREET_NAME"] == "BATTERY ST"
@@ -146,13 +158,14 @@ def add_meters(doc):
         pm_dtsf_cbd = cbd_fidi.contains(p) or cbd_jackson.contains(p)
         pm_battery_adj = battery_adj.contains(p)
         if pm_battery:  # or pm_sansome:
+            if pm["CAP_COLOR"].lower() in ("red", "yellow"):
+                post_ids[pm["POST_ID"]] += 1
             street_num = int(pm['STREET_NUM'])
-            if pm_battery:
-                if street_num / 2 == int(street_num / 2):
-                    mtypes_battery_east[f'{pm["CAP_COLOR"]}'] += 1
-                else:
-                    mtypes_battery_west[f'{pm["CAP_COLOR"]}'] += 1
-                inside_battery_count += 1
+            if street_num / 2 == int(street_num / 2):
+                mtypes_battery_east[f'{pm["CAP_COLOR"]}'] += 1
+            else:
+                mtypes_battery_west[f'{pm["CAP_COLOR"]}'] += 1
+            inside_battery_count += 1
             pmp = doc.newpolygon(name=f"{pm['STREET_NUM']} {pm['STREET_NAME']}\n" +
                                       f"Post ID: {pm['POST_ID']}, Space ID: {pm['PARKING_SPACE_ID']}\n" +
                                       f"[Type: {meter_desc[pm['CAP_COLOR']]}]\n" +
@@ -201,10 +214,12 @@ def add_meters(doc):
               f"{round(both / mtype_batadj[k] * 100, 2)}%\t"
               f"{round(bat_east / mtype_batadj[k] * 100, 2)}%")
 
+    with open("post_ids.csv", "w") as fh:
+        fh.write("\n".join(sorted(post_ids.keys())))
+
 
 def make_battery_sansome_qb_map(name):
-    k = simplekml
-    doc = k.Kml(name=name)
+    doc = K.Kml(name=name)
 
     for k, b in boundaries.items():
         poly = doc.newpolygon(name=b["n"], description=b["n"])
@@ -215,6 +230,100 @@ def make_battery_sansome_qb_map(name):
     add_meters(doc)
     add_blue_zones(doc, boundaries["battery"]["b"])
     return doc
+
+
+def add_meters_in_zone(doc, zone_bdy, also_bdy):
+    meters_in_color = defaultdict(int)
+    meters_out_color = defaultdict(int)
+    also_in_color = defaultdict(int)
+    also_out_color = defaultdict(int)
+    for pm in load_tsv("data/Parking_Meters.tsv"):
+        cap = pm["CAP_COLOR"].lower()
+        p = Point(Decimal(pm["LONGITUDE"]), Decimal(pm["LATITUDE"]))
+        if cap in ("red", "yellow"):
+            if zone_bdy.contains(p):
+                pmp = doc.newpolygon(name=f"{pm['STREET_NUM']} {pm['STREET_NAME']}\n" +
+                                      f"Post ID: {pm['POST_ID']}, Space ID: {pm['PARKING_SPACE_ID']}\n" +
+                                      f"[Type: {meter_desc[pm['CAP_COLOR']]}]\n" +
+                                      f"(District {pm['Current Supervisor Districts']}, SFPD Central)")
+                pmp.outerboundaryis = make_meter(p.x, p.y, width=meter_bb_size*2, length=meter_bb_size*2)
+                pmp.placemark.geometry.outerboundaryis.gxaltitudeoffset = 100
+                pmp.stylemap = meter_colors[pm["CAP_COLOR"]]
+                meters_in_color[cap] += 1
+                if also_bdy.contains(p):
+                    also_in_color[cap] += 1
+                else:
+                    also_out_color[cap] += 1
+            else:
+                meters_out_color[cap] += 1
+
+    print_dict(meters_in_color, "Contractor meters inside zone")
+    print_dict(meters_out_color, "Contractor meters outside zone")
+    print_dict(also_in_color, "Contractor meters inside zone & on Battery St")
+    print_dict(also_out_color, "Contractor meters inside zone, but not on Battery St")
+
+
+def add_polyline(doc, boundary, altitude):
+    poly = doc.newpolygon(name=boundary["n"], description=boundary["n"])
+    poly.outerboundaryis = list(boundary["b"].exterior.coords)
+    poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = altitude
+    poly.stylemap = boundary["c"]
+
+
+def make_contractor_map(name):
+    doc = K.Kml(name=name)
+
+    b = boundaries["battery"]
+    add_polyline(doc, b, -10)
+
+    c = boundaries["contractors2"]
+    add_polyline(doc, c, -10)
+
+    add_meters_in_zone(doc, c["b"], b["b"])
+    doc.save("contractors.kml")
+
+
+def make_ramp_circle(doc, name, x, y, stylemap, r=meter_bb_size):
+    polycircle = polycircles.Polycircle(
+        longitude=x, latitude=y, radius=r, number_of_vertices=24)
+
+    circle = doc.newpolygon(
+        name=name, outerboundaryis=polycircle.to_kml())
+    circle.placemark.geometry.outerboundaryis.gxaltitudeoffset = 5
+    circle.stylemap = stylemap
+
+
+def add_curbs_in_zone(doc, within_bdy):
+    ramp_col = make_stylemap({"ncol": "5055F0FF", "nwidth": 16, "hcol": "5055FFFF", "hwidth": 16})
+    for c in load_tsv("data/Curb_Ramps.tsv"):
+        try:
+            p = Point(Decimal(c["Longitude"]), Decimal(c["Latitude"]))
+        except InvalidOperation as ioex:
+            print(f'Invalid coordinates: Longitude: {c["Longitude"]}, Latitude: {c["Latitude"]}')
+        if within_bdy.contains(p):
+            name = (f"ocID: {c['ocID']}\n"
+                    f'positionOnReturn: {c["positionOnReturn"]}\n'
+                    f'conditionScore: {c["conditionScore"]}\n'
+                    f'crExist: {c["crExist"]}\n'
+                    f'crPossible: {c["crPossible"]}\n'
+                    f'curbReturnLoc: {c["curbReturnLoc"]}\n'
+                    f'detectableSurf: {c["detectableSurf"]}\n'
+                    f'flushToCorner: {c["flushToCorner"]}\n'
+                    f'heavyTraffic: {c["heavyTraffic"]}\n'
+                    f'insideCrosswalk: {c["insideCrosswalk"]}\n'
+                    f'levelLandBottom: {c["levelLandBottom"]}\n'
+                    f'levelLandTop: {c["levelLandTop"]}\n'
+                    f'lipTooHigh: {c["lipTooHigh"]}')
+
+            make_ramp_circle(doc, name, p.x, p.y, r=5, stylemap=ramp_col)
+
+
+def make_curb_ramp_map(name):
+    doc = K.Kml(name=name)
+    b = boundaries["battery"]
+    # add_polyline(doc, b, -10)
+    add_curbs_in_zone(doc, b["b"])
+    doc.save("battery_curb_ramps.kml")
 
 
 def main_sanity_check():
@@ -228,5 +337,9 @@ def main_sanity_check():
 
 
 if __name__ == "__main__":
-    d = make_battery_sansome_qb_map("Battery Street Parking Spaces")
-    d.save("better.kml")
+    # make_curb_ramp_map("Accessible curb ramps along Battery St in the QB zone")
+
+    make_contractor_map("Contractor parking around Battery, from Sansome & Clay->Front->Market->Sansome.")
+
+    # d = make_battery_sansome_qb_map("Battery Street Parking Spaces")
+    # d.save("better.kml")

@@ -3,3 +3,5 @@
 .venv
 .DS_Store
 *.pyc
+SFMTA_Parking_Meter_Detailed_Revenue_Transactions.tsv
+SFMTA_Parking_Meter_Detailed_Revenue_Transactions.tsv.gz

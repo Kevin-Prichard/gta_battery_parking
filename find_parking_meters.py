@@ -1,17 +1,27 @@
 #!/usr/bin/env python3.10
-import logging
 from collections import defaultdict
 from decimal import Decimal, InvalidOperation
+import logging
+import math
+from functools import partial
+from itertools import permutations
+from typing import List
 
 import matplotlib.pyplot as plt
 from polycircles import polycircles
+import pyproj
+from pyproj import Geod
 import simplekml
+from simplekml import StyleMap
 from shapely.geometry import Point, Polygon
+from shapely.ops import transform
 
 from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, wkt_to_kml, print_dict
 
+
 logger = logging.getLogger(__name__)
 K = simplekml
+geod = Geod(ellps="WGS84")
 
 # Based upon https://www.usna.edu/Users/oceano/pguth/md_help/html/approx_equivalents.htm
 # 0.00001 deg = 1.11 m
@@ -20,7 +30,8 @@ meter_bb_size = 0.000025  # parking meter bounding box size
 blue_zone_width = 0.000025
 blue_zone_length = 0.00006
 dtsf_grid_rotation = 11.5  # 9.800
-
+sqmi2sqkm = 2.58999
+sqkm2sqmi = 0.386102
 
 blue_zone_color = make_stylemap({"ncol": "50FF7800", "nwidth": 4, "hcol": "50FF7800", "hwidth": 16})
 
@@ -66,42 +77,68 @@ meter_types = {
 }
 
 
+class Boundary:
+    b: Polygon
+    n: str
+    c: StyleMap
+
+    def __init__(self, b: Polygon, n: str, c: StyleMap):
+        self.b = b
+        self.n = n
+        self.c = c
+
+
 boundaries = {
-    "cbd_fidi": {
-        "b": load_boundary_file("data/downtownsf_cbd_fidi.json.poly"),
-        "n": "Downtown SF CBD Financial District",
-        "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
-    },
-    "cbd_jackson": {
-        "b": load_boundary_file("data/downtownsf_cbd_jackson_sq.json.poly"),
-        "n": "Downtown SF CBD Jackson Square",
-        "c": make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
-    },
-    "battery": {
-        "b": load_boundary_file("data/battery_qb.json.poly"),
-        "n": "Battery Street Quick Build Area",
-        "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
-    },
-    "battery_adjacent": {
-        "b": load_boundary_file("data/battery_adjacent_parking.json.poly"),
-        "n": "Battery Street Adjacent Parking Area",
-        "c": make_stylemap({"ncol": "5014F0F0", "nwidth": 4, "hcol": "5014F0F0", "hwidth": 16}),
-    },
-    "sansome": {
-        "b": load_boundary_file("data/sansome_qb.json.poly"),
-        "n": "Sansome Street Quick Build Area",
-        "c": make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
-    },
-    "contractors": {
-        "b": load_boundary_file("data/contractor_spaces_zone.json.poly"),
-        "n": "Area within which we'll search for contractor spaces: yellow and red caps",
-        "c": make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
-    },
-    "contractors2": {
-        "b": load_boundary_file("data/contractor_tighter.json.poly"),
-        "n": "Area #2 within which we'll search for contractor spaces: yellow and red caps",
-        "c": make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
-    },
+    "cbd_fidi": Boundary(
+        b=load_boundary_file("data/downtownsf_cbd_fidi.json.poly"),
+        n="Downtown SF CBD Financial District",
+        c=make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
+    ),
+    "cbd_jackson": Boundary(
+        b=load_boundary_file("data/downtownsf_cbd_jackson_sq.json.poly"),
+        n="Downtown SF CBD Jackson Square",
+        c=make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
+    ),
+    "battery": Boundary(
+        b=load_boundary_file("data/battery_qb.json.poly"),
+        n="Battery Street Quick Build Area",
+        c=make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
+    ),
+    "battery_adjacent": Boundary(
+        b=load_boundary_file("data/battery_adjacent_parking.json.poly"),
+        n="Battery Street Adjacent Parking Area",
+        c=make_stylemap({"ncol": "5014F0F0", "nwidth": 4, "hcol": "5014F0F0", "hwidth": 16}),
+    ),
+    "sansome": Boundary(
+        b=load_boundary_file("data/sansome_qb.json.poly"),
+        n="Sansome Street Quick Build Area",
+        c=make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
+    ),
+    "contractors": Boundary(
+        b=load_boundary_file("data/contractor_spaces_zone.json.poly"),
+        n="Area within which we'll search for contractor spaces: yellow and red caps",
+        c=make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
+    ),
+    "contractors2": Boundary(
+        b=load_boundary_file("data/contractor_tighter.json.poly"),
+        n="Area #2 within which we'll search for contractor spaces: yellow and red caps",
+        c=make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
+    ),
+    "bcna_below_bway": Boundary(
+        b=load_boundary_file("data/bcna_below_broadway.json.poly"),
+        n="BCNA Below Broadway, to Market & Embarcadero",
+        c=make_stylemap({"ncol": "50144BF5", "nwidth": 16, "hcol": "50144BF5", "hwidth": 16}),
+    ),
+    "battery_westward": Boundary(
+        b=load_boundary_file("data/battery_west_to_van_ness.json.poly"),
+        n="Battery Westward to Van Ness, From Broadway to Market",
+        c=make_stylemap({"ncol": "5000C814", "nwidth": 16, "hcol": "5000C814", "hwidth": 16}),
+    ),
+    "battery_bway_inversion": Boundary(
+        b=load_boundary_file("data/bcna_bway_inversion.json.poly"),
+        n="The 99% of SF Outside of BCNA below Broadway",
+        c=make_stylemap({"ncol": "5000C814", "nwidth": 16, "hcol": "5000C814", "hwidth": 16}),
+    ),
 }
 
 
@@ -138,11 +175,10 @@ def add_blue_zones(doc, battery_bounds):
 
 
 def add_meters(doc):
-    battery = boundaries["battery"]["b"]
-    battery_adj = boundaries["battery_adjacent"]["b"]
-    # sansome = boundaries["sansome"]["b"]
-    cbd_fidi = boundaries["cbd_fidi"]["b"]
-    cbd_jackson = boundaries["cbd_jackson"]["b"]
+    battery = boundaries["battery"].b
+    battery_adj = boundaries["battery_adjacent"].b
+    cbd_fidi = boundaries["cbd_fidi"].b
+    cbd_jackson = boundaries["cbd_jackson"].b
     inside_battery_count = 0
     inside_dtsf_cbd_count = 0
     inside_battery_adj_count = 0
@@ -154,7 +190,6 @@ def add_meters(doc):
     for pm in load_tsv("data/Parking_Meters.tsv"):
         p = Point(Decimal(pm["LONGITUDE"]), Decimal(pm["LATITUDE"]))
         pm_battery = battery.contains(p) and pm["STREET_NAME"] == "BATTERY ST"
-        # pm_sansome = sansome.contains(p) and pm["STREET_NAME"] == "SANSOME ST"
         pm_dtsf_cbd = cbd_fidi.contains(p) or cbd_jackson.contains(p)
         pm_battery_adj = battery_adj.contains(p)
         if pm_battery:  # or pm_sansome:
@@ -222,13 +257,13 @@ def make_battery_sansome_qb_map(name):
     doc = K.Kml(name=name)
 
     for k, b in boundaries.items():
-        poly = doc.newpolygon(name=b["n"], description=b["n"])
-        poly.outerboundaryis = list(b["b"].exterior.coords)
+        poly = doc.newpolygon(name=b.n, description=b.n)
+        poly.outerboundaryis = list(b.b.exterior.coords)
         poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = 0
-        poly.stylemap = b["c"]
+        poly.stylemap = b.c
 
     add_meters(doc)
-    add_blue_zones(doc, boundaries["battery"]["b"])
+    add_blue_zones(doc, boundaries["battery"].b)
     return doc
 
 
@@ -264,10 +299,10 @@ def add_meters_in_zone(doc, zone_bdy, also_bdy):
 
 
 def add_polyline(doc, boundary, altitude):
-    poly = doc.newpolygon(name=boundary["n"], description=boundary["n"])
-    poly.outerboundaryis = list(boundary["b"].exterior.coords)
+    poly = doc.newpolygon(name=boundary.n, description=boundary.n)
+    poly.outerboundaryis = list(boundary.b.exterior.coords)
     poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = altitude
-    poly.stylemap = boundary["c"]
+    poly.stylemap = boundary.c
 
 
 def make_contractor_map(name):
@@ -279,8 +314,8 @@ def make_contractor_map(name):
     c = boundaries["contractors2"]
     add_polyline(doc, c, -10)
 
-    add_meters_in_zone(doc, c["b"], b["b"])
-    doc.save("contractors.kml")
+    add_meters_in_zone(doc, c.b, b.b)
+    doc.save("kml/contractors.kml")
 
 
 def make_ramp_circle(doc, name, x, y, stylemap, r=meter_bb_size):
@@ -322,8 +357,8 @@ def make_curb_ramp_map(name):
     doc = K.Kml(name=name)
     b = boundaries["battery"]
     # add_polyline(doc, b, -10)
-    add_curbs_in_zone(doc, b["b"])
-    doc.save("battery_curb_ramps.kml")
+    add_curbs_in_zone(doc, b.b)
+    doc.save("kml/battery_curb_ramps.kml")
 
 
 def main_sanity_check():
@@ -336,10 +371,38 @@ def main_sanity_check():
     plt.show()
 
 
+def get_area2(poly):
+    # https://stackoverflow.com/a/64165076/604811
+    return abs(geod.geometry_area_perimeter(poly)[0])
+
+
+def paired_areas(b1: Boundary, b2: Boundary):
+    bdy1: Polygon = b1.b
+    bdy2: Polygon = b2.b
+    precish = 3
+
+    area1, area2 = get_area2(bdy1) / 1e6, get_area2(bdy2) / 1e6
+    print(f"\nAreas <{b1.n}> vs <{b2.n}>")
+    print(f"{b1.n}: {round(area1, precish):,} sqkm ({round(area1 * sqkm2sqmi, precish):,} sqmi)")
+    print(f"{b2.n}: {round(area2, precish):,} sqkm ({round(area2 * sqkm2sqmi, precish):,} sqmi)")
+    min_area, max_area = min(area1, area2), max(area1, area2)
+    print(f"Difference: {round(max_area - min_area, precish):,} sqkm ({round((max_area - min_area) * sqkm2sqmi, precish)} sqmi)")
+    print(f"Ratio sqkm: {round(max_area, precish)}  / {round(min_area, 1)} = {round(max_area / min_area, precish)} to 1")
+    print(f"Ratio sqmi: {round(max_area * sqkm2sqmi, precish)}  / {round(min_area * sqkm2sqmi, precish)} = {round((max_area * sqkm2sqmi) / (min_area * sqkm2sqmi), precish)} to 1")
+
+
+def paired_areas_all(areas: List[str]):
+    for permu in permutations(areas):
+        paired_areas(boundaries[permu[0]], boundaries[permu[1]])
+
+
 if __name__ == "__main__":
+    # test_area()
+    paired_areas_all(["bcna_below_bway", "battery_westward", "battery_bway_inversion"])
+
     # make_curb_ramp_map("Accessible curb ramps along Battery St in the QB zone")
 
-    make_contractor_map("Contractor parking around Battery, from Sansome & Clay->Front->Market->Sansome.")
+    # make_contractor_map("Contractor parking around Battery, from Sansome & Clay->Front->Market->Sansome.")
 
     # d = make_battery_sansome_qb_map("Battery Street Parking Spaces")
     # d.save("better.kml")

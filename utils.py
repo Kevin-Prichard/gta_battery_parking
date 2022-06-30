@@ -10,6 +10,7 @@ from shapely.geometry import Polygon
 
 K = simplekml
 
+
 def rotate2d(point, angle, center=(0, 0)):
     rads = radians(angle % 360)
     new_pt = (point[0] - center[0], point[1] - center[1])
@@ -29,12 +30,12 @@ def load_tsv(fname):
             yield row
 
 
-def load_boundary_file(fname, pruncate=0):
+def load_boundary_file(fname, pruncate=0) -> Polygon:
     with open(fname, "r") as f:
         all = f.read()
     obj = json.loads(all[all.find("{"):])
-    pol = Polygon([(p[0], p[1]) for p in obj["coordinates"][0][pruncate:]])
-    return pol
+    # return Polygon([(p[0], p[1]) for p in obj["coordinates"][0][pruncate:]])
+    return Polygon(shell=[(p[0], p[1]) for p in obj["coordinates"][0][pruncate:]])
 
 
 def make_stylemap(cols_widths: dict):  # norm_col, norm_width, hi_col, hi_width

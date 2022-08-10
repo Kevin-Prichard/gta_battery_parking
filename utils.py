@@ -1,5 +1,8 @@
 import csv
+import gzip
+from io import TextIOWrapper
 import json
+import logging
 import re
 from math import radians, cos, sin
 import random
@@ -7,6 +10,8 @@ import random
 import simplekml
 from shapely.geometry import Polygon
 
+
+logger = logging.getLogger(__name__)
 
 K = simplekml
 
@@ -20,14 +25,26 @@ def rotate2d(point, angle, center=(0, 0)):
     return new_pt
 
 
-def load_tsv(fname):
-    with open(fname, "r") as f:
-        fields = f.readline()[1:]
-        fields = fields.split("\t")
-        reader = csv.DictReader(f, fields, delimiter="\t")
-        rows = []
+def load_tsv(fname: str, show_count_every=0):
+    if fname.lower().endswith(".tsv.gz"):
+        fh = TextIOWrapper(gzip.open(filename=fname, mode="rb"), encoding="utf-8")
+    elif fname.lower().endswith(".tsv"):
+        fh = open(fname, "r")
+    else:
+        raise Exception(f"Don't know what to do with this pathname: {fname}")
+    try:
+        fields_line = fh.readline()
+        p = 0
+        while ord(fields_line[p]) >= 128:
+            p += 1
+        fields = fields_line[p:].split("\t")
+        reader = csv.DictReader(fh, fields, delimiter="\t")
         for row in reader:
+            # if show_count_every and c / show_count_every == int(c / show_count_every):
+            #     print(c)
             yield row
+    finally:
+        fh.close()
 
 
 def load_boundary_file(fname, pruncate=0) -> Polygon:
@@ -79,7 +96,21 @@ def wkt_to_kml(wkt, doc, dry=False):
     return {"type": parts.group(1), "coords": coords}
 
 
-def print_dict(d, label):
-    print(label)
-    for k, v in d.items():
-        print(f"{k}\t{v}")
+def print_cap_dict(d, label=None, key_subst=None, skip_keys=None):
+    if label:
+        print(label)
+    tot = 0
+    for k in sorted(d.keys(), key=lambda x: key_subst[x] if key_subst else x):
+        if not skip_keys or k not in skip_keys:
+            print(f"{key_subst[k] if key_subst else k}\t{d[k]}")
+            tot += d[k]
+    print(f"Total: {tot}")
+
+
+class DictObj(dict):
+    def __init__(self, d=None):
+        super().__init__(d)
+
+    def __getattr__(self, item):
+        if item in self:
+            return self[item]

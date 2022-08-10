@@ -2,148 +2,37 @@
 from collections import defaultdict
 from decimal import Decimal, InvalidOperation
 import logging
-import math
 from functools import partial
 from itertools import permutations
 from typing import List
 
 import matplotlib.pyplot as plt
 from polycircles import polycircles
-import pyproj
 from pyproj import Geod
 import simplekml
-from simplekml import StyleMap
 from shapely.geometry import Point, Polygon
-from shapely.ops import transform
 
-from utils import rotate2d, load_tsv, make_stylemap, load_boundary_file, wkt_to_kml, print_dict
+from defs.boundaries import Boundary, boundaries
+from defs.meters import (meter_bb_size, blue_zone_width, blue_zone_length,
+                         dtsf_grid_rotation, sqkm2sqmi, blue_zone_color,
+                         blue_zone_street_side, meter_colors, meter_desc)
+from utils import rotate2d, load_tsv, make_stylemap, wkt_to_kml, print_cap_dict
 
 
 logger = logging.getLogger(__name__)
 K = simplekml
 geod = Geod(ellps="WGS84")
 
-# Based upon https://www.usna.edu/Users/oceano/pguth/md_help/html/approx_equivalents.htm
-# 0.00001 deg = 1.11 m
-# 0.000001 deg = 0.11 m (7 decimals, cm accuracy)
-meter_bb_size = 0.000025  # parking meter bounding box size
-blue_zone_width = 0.000025
-blue_zone_length = 0.00006
-dtsf_grid_rotation = 11.5  # 9.800
-sqmi2sqkm = 2.58999
-sqkm2sqmi = 0.386102
 
-blue_zone_color = make_stylemap({"ncol": "50FF7800", "nwidth": 4, "hcol": "50FF7800", "hwidth": 16})
-
-blue_zone_street_side = {
-    "w": "west",
-    "west": "west",
-    "e": "east",
-    "east": "east",
-    "n": "north",
-    "north": "north",
-    "ne": "northeast",
-    "s": "south",
-    "se": "southeast",
-    "sw": "southwest",
-    "south": "south",
-    "unknown": "<unknown>",
-    "": "<unknown>",
-}
-
-
-meter_colors = {
-    "Yellow": make_stylemap({"ncol": "5013F0FF", "nwidth": 4, "hcol": "5000FFFF", "hwidth": 16}),
-    "Black": make_stylemap({"ncol": "50000000", "nwidth": 4, "hcol": "50585858", "hwidth": 16}),
-    "Grey": make_stylemap({"ncol": "508C8C8C", "nwidth": 4, "hcol": "50D0D0D0", "hwidth": 16}),
-    "-": make_stylemap({"ncol": "501478FF", "nwidth": 4, "hcol": "501478FF", "hwidth": 16}),
-    "Red": make_stylemap({"ncol": "501400F0", "nwidth": 4, "hcol": "501437FD", "hwidth": 16}),
-    "Green": make_stylemap({"ncol": "5014F028", "nwidth": 4, "hcol": "5014F0A9", "hwidth": 16}),
-    "Blue": make_stylemap({"ncol": "50F03714", "nwidth": 4, "hcol": "50F09A14", "hwidth": 16}),
-}
-meter_desc = {
-    "Yellow": "Commercial Only",
-    "Black": "Motorcycle",
-    "Grey": "Residential",
-    "-": "Eliminated",
-    "Red": "Commercial Trucks Only",
-    "Green": "15-30 Min Limit",
-    "Blue": "Accessible Parking",
-}
-meter_types = {
-    "-": "UNKNOWN",
-    "MS": "MOTORCYCLE",
-    "SS": "NORMAL"
-}
-
-
-class Boundary:
-    b: Polygon
-    n: str
-    c: StyleMap
-
-    def __init__(self, b: Polygon, n: str, c: StyleMap):
-        self.b = b
-        self.n = n
-        self.c = c
-
-
-boundaries = {
-    "cbd_fidi": Boundary(
-        b=load_boundary_file("data/downtownsf_cbd_fidi.json.poly"),
-        n="Downtown SF CBD Financial District",
-        c=make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
-    ),
-    "cbd_jackson": Boundary(
-        b=load_boundary_file("data/downtownsf_cbd_jackson_sq.json.poly"),
-        n="Downtown SF CBD Jackson Square",
-        c=make_stylemap({"ncol": "448F9185", "nwidth": 4, "hcol": "44999B8F", "hwidth": 16}),
-    ),
-    "battery": Boundary(
-        b=load_boundary_file("data/battery_qb.json.poly"),
-        n="Battery Street Quick Build Area",
-        c=make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
-    ),
-    "battery_adjacent": Boundary(
-        b=load_boundary_file("data/battery_adjacent_parking.json.poly"),
-        n="Battery Street Adjacent Parking Area",
-        c=make_stylemap({"ncol": "5014F0F0", "nwidth": 4, "hcol": "5014F0F0", "hwidth": 16}),
-    ),
-    "sansome": Boundary(
-        b=load_boundary_file("data/sansome_qb.json.poly"),
-        n="Sansome Street Quick Build Area",
-        c=make_stylemap({"ncol": "305078F0", "nwidth": 4, "hcol": "305078F0", "hwidth": 16}),
-    ),
-    "contractors": Boundary(
-        b=load_boundary_file("data/contractor_spaces_zone.json.poly"),
-        n="Area within which we'll search for contractor spaces: yellow and red caps",
-        c=make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
-    ),
-    "contractors2": Boundary(
-        b=load_boundary_file("data/contractor_tighter.json.poly"),
-        n="Area #2 within which we'll search for contractor spaces: yellow and red caps",
-        c=make_stylemap({"ncol": "2514F0F0", "nwidth": 4, "hcol": "2514F0F0", "hwidth": 16}),
-    ),
-    "bcna_below_bway": Boundary(
-        b=load_boundary_file("data/bcna_below_broadway.json.poly"),
-        n="BCNA Below Broadway, to Market & Embarcadero",
-        c=make_stylemap({"ncol": "50144BF5", "nwidth": 16, "hcol": "50144BF5", "hwidth": 16}),
-    ),
-    "battery_westward": Boundary(
-        b=load_boundary_file("data/battery_west_to_van_ness.json.poly"),
-        n="Battery Westward to Van Ness, From Broadway to Market",
-        c=make_stylemap({"ncol": "5000C814", "nwidth": 16, "hcol": "5000C814", "hwidth": 16}),
-    ),
-    "battery_bway_inversion": Boundary(
-        b=load_boundary_file("data/bcna_bway_inversion.json.poly"),
-        n="The 99% of SF Outside of BCNA below Broadway",
-        c=make_stylemap({"ncol": "5000C814", "nwidth": 16, "hcol": "5000C814", "hwidth": 16}),
-    ),
-}
-
-
-# Turns the singular x, y point of a SF parking meter into a square
 def make_meter(x, y, width=meter_bb_size, length=meter_bb_size):
+    """
+    Turns the singular lon, latpoint of an SF parking meter into a square
+    :param x: latitude
+    :param y: longitude
+    :param width: width of pkg meter plot
+    :param length: height of pkg meter plot
+    :return:
+    """
     rot_cp = (x, y)
     return [
         rot_cp,
@@ -154,14 +43,20 @@ def make_meter(x, y, width=meter_bb_size, length=meter_bb_size):
     ]
 
 
-def add_blue_zones(doc, battery_bounds):
+def add_blue_zones(doc, bounds):
+    """
+    Plots blue zones within :bounds: to :doc:, from https://catalog.data.gov/dataset/accessible-curb-blue-zone
+    :param doc: a simplekml.Kml obj
+    :param bounds: a shapely polygon
+    :return: None
+    """
     zone_count = 0
     for bz in load_tsv("data/Accessible_Curb__Blue_Zone_.tsv"):
         if not bz["shape"]:
             continue
         pt = wkt_to_kml(bz["shape"], doc, True)
         x, y = pt['coords'][0][0], pt['coords'][0][1]
-        if not battery_bounds.contains(Point(x, y)):
+        if not bounds.contains(Point(x, y)):
             continue
         bz_street_side = blue_zone_street_side[bz['STSIDE'].lower()]
 
@@ -174,8 +69,8 @@ def add_blue_zones(doc, battery_bounds):
         zone_count += 1
 
 
-def add_meters(doc):
-    battery = boundaries["battery"].b
+def add_meters_to_sansome_qb_map(doc):
+    battery = boundaries["battery_qb"].b
     battery_adj = boundaries["battery_adjacent"].b
     cbd_fidi = boundaries["cbd_fidi"].b
     cbd_jackson = boundaries["cbd_jackson"].b
@@ -262,53 +157,68 @@ def make_battery_sansome_qb_map(name):
         poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = 0
         poly.stylemap = b.c
 
-    add_meters(doc)
-    add_blue_zones(doc, boundaries["battery"].b)
+    add_meters_to_sansome_qb_map(doc)
+    add_blue_zones(doc, boundaries["battery_qb"].b)
     return doc
 
 
-def add_meters_in_zone(doc, zone_bdy, also_bdy):
+def add_meters_in_zone(doc, zone_bdy, also_bdy, make_polys=True, addl_inclusion_fn=None,
+                       wanted_caps=None, show_outside=True, wanted_caps_name="Contractor meters"):
     meters_in_color = defaultdict(int)
     meters_out_color = defaultdict(int)
     also_in_color = defaultdict(int)
     also_out_color = defaultdict(int)
     for pm in load_tsv("data/Parking_Meters.tsv"):
-        cap = pm["CAP_COLOR"].lower()
+        cap = pm["CAP_COLOR"]
         p = Point(Decimal(pm["LONGITUDE"]), Decimal(pm["LATITUDE"]))
-        if cap in ("red", "yellow"):
+        if not wanted_caps or cap in wanted_caps:
             if zone_bdy.contains(p):
-                pmp = doc.newpolygon(name=f"{pm['STREET_NUM']} {pm['STREET_NAME']}\n" +
-                                      f"Post ID: {pm['POST_ID']}, Space ID: {pm['PARKING_SPACE_ID']}\n" +
-                                      f"[Type: {meter_desc[pm['CAP_COLOR']]}]\n" +
-                                      f"(District {pm['Current Supervisor Districts']}, SFPD Central)")
-                pmp.outerboundaryis = make_meter(p.x, p.y, width=meter_bb_size*2, length=meter_bb_size*2)
-                pmp.placemark.geometry.outerboundaryis.gxaltitudeoffset = 100
-                pmp.stylemap = meter_colors[pm["CAP_COLOR"]]
-                meters_in_color[cap] += 1
-                if also_bdy.contains(p):
-                    also_in_color[cap] += 1
-                else:
-                    also_out_color[cap] += 1
+                if not addl_inclusion_fn or addl_inclusion_fn(pm, p):
+                    # print(f"Included: {pm['POST_ID']}")
+                    if make_polys:
+                        pmp = doc.newpolygon(
+                            name=f"{pm['STREET_NUM']}"
+                                 f"{pm['STREET_NAME']}\n"
+                                 f"Post ID: {pm['POST_ID']}, "
+                                 f"Space ID: {pm['PARKING_SPACE_ID']}\n"
+                                 f"[Type: {meter_desc[pm['CAP_COLOR']]}]\n"
+                                 f"(District {pm['Current Supervisor Districts']}, SFPD Central)")
+                        pmp.outerboundaryis = make_meter(p.x, p.y, width=meter_bb_size * 2, length=meter_bb_size * 2)
+                        pmp.placemark.geometry.outerboundaryis.gxaltitudeoffset = 100
+                        pmp.stylemap = meter_colors[pm["CAP_COLOR"]]
+                    meters_in_color[cap] += 1
+                    if also_bdy:
+                        if also_bdy.contains(p):
+                            also_in_color[cap] += 1
+                        else:
+                            also_out_color[cap] += 1
+                # else:
+                #     print(f"Excluded: {pm['POST_ID']}")
             else:
                 meters_out_color[cap] += 1
 
-    print_dict(meters_in_color, "Contractor meters inside zone")
-    print_dict(meters_out_color, "Contractor meters outside zone")
-    print_dict(also_in_color, "Contractor meters inside zone & on Battery St")
-    print_dict(also_out_color, "Contractor meters inside zone, but not on Battery St")
+    skip_rem = ["-"]
+    dolabs = False
+    print_cap_dict(meters_in_color, f"{wanted_caps_name} inside zone" if dolabs else "", meter_desc, skip_rem)
+    if show_outside:
+        print_cap_dict(meters_out_color, f"{wanted_caps_name} outside zone" if dolabs else "", meter_desc, skip_rem)
+    if also_bdy:
+        print_cap_dict(also_in_color, f"{wanted_caps_name} inside main zone & additional zone" if dolabs else "", meter_desc, skip_rem)
+        if show_outside:
+            print_cap_dict(also_out_color, f"{wanted_caps_name} inside main zone, but not in additional zone" if dolabs else "", meter_desc, skip_rem)
 
 
-def add_polyline(doc, boundary, altitude):
+def add_polyline(doc, boundary, altitude: float = None):
     poly = doc.newpolygon(name=boundary.n, description=boundary.n)
     poly.outerboundaryis = list(boundary.b.exterior.coords)
-    poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = altitude
+    poly.placemark.geometry.outerboundaryis.gxaltitudeoffset = boundary.a or altitude
     poly.stylemap = boundary.c
 
 
 def make_contractor_map(name):
     doc = K.Kml(name=name)
 
-    b = boundaries["battery"]
+    b = boundaries["battery_qb"]
     add_polyline(doc, b, -10)
 
     c = boundaries["contractors2"]
@@ -355,8 +265,7 @@ def add_curbs_in_zone(doc, within_bdy):
 
 def make_curb_ramp_map(name):
     doc = K.Kml(name=name)
-    b = boundaries["battery"]
-    # add_polyline(doc, b, -10)
+    b = boundaries["battery_qb"]
     add_curbs_in_zone(doc, b.b)
     doc.save("kml/battery_curb_ramps.kml")
 
@@ -396,9 +305,71 @@ def paired_areas_all(areas: List[str]):
         paired_areas(boundaries[permu[0]], boundaries[permu[1]])
 
 
+def is_east_or_west_meter(odd_or_even_wanted: bool, meter, point):
+    """
+    :param odd_or_even_wanted: bool, False==odd, True==even
+    :param meter: for meter["STREET_NUM"]
+    :param point: not used yet
+    :return: bool
+
+    Odd STREET_NUM and even wanted
+    >>> bool(3 % 2 ^ True)
+    False
+
+    Odd STREET_NUM and odd wanted
+    >>> bool(3 % 2 ^ False)
+    True
+
+    Even STREET_NUM and even wanted
+    >>> bool(4 % 2 ^ True)
+    True
+
+    Odd STREET_NUM and odd wanted
+    >>> bool(4 % 2 ^ False)
+    False
+    """
+    return bool(int(meter["STREET_NUM"]) % 2 ^ odd_or_even_wanted)
+
+
+def meter_counts_by_areas_east_vs_west(areas):
+    doc = K.Kml(name=f"Areas: {', '.join(areas)}")
+    for area in areas:
+        for odd_or_even_wanted in (True, False):
+            east_or_west_label = "East" if odd_or_even_wanted else "West"
+            incl_fn = partial(is_east_or_west_meter, odd_or_even_wanted)
+            print(f"\n{boundaries[area].n} {east_or_west_label}")
+            add_meters_in_zone(doc, boundaries[area].b, None, make_polys=True,
+                               addl_inclusion_fn=incl_fn, show_outside=False)
+    return doc
+
+
+def meter_counts_by_areas(areas):
+    doc = K.Kml(name=f"Areas: {', '.join(areas)}")
+    for area in areas:
+        print(f"\n{boundaries[area].n}")
+        add_meters_in_zone(
+            doc, boundaries[area].b, also_bdy=None, make_polys=True, show_outside=False)
+    return doc
+
+
+def make_boundary_maps(boundaryset: List[Boundary], kml_pathname: str):
+    doc = K.Kml()
+    for boundary in boundaryset:
+        add_polyline(doc, boundary)
+    doc.save(kml_pathname)
+
+
 if __name__ == "__main__":
+    # make_boundary_maps(
+    #     [boundaries.district_3, boundaries.battery_embarcadero_market],
+    #     "district_3-battery.kml")
+
+    doc = meter_counts_by_areas_east_vs_west(["battery_all_parking"])
+    # add_blue_zones(doc, boundaries["battery_adjacent"].b)
+    # doc.save("saturday3.kml")
+
     # test_area()
-    paired_areas_all(["bcna_below_bway", "battery_westward", "battery_bway_inversion"])
+    # paired_areas_all(["bcna_below_bway", "battery_westward", "battery_bway_inversion"])
 
     # make_curb_ramp_map("Accessible curb ramps along Battery St in the QB zone")
 
